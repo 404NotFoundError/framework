@@ -1,0 +1,22 @@
+{
+    "name": "adebayo/room",
+    "authors": [
+        {
+            "name": "HOUNTONDJI Adebayo",
+            "email": "godwill.hountondji@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Tool\\": "./tools",
+            "App\\": "./src",
+            "Helper\\": "./helpers"
+        }
+    },
+    "scripts": {
+      "deploy" : "Tool\\Deploy\\DeployApp::deploy"
+    },
+    "require": {
+        "twig/twig": "^2.5"
+    }
+}
