@@ -7,7 +7,7 @@ module.exports = {
 
     mode: 'development',
     watch: true,
-    entry: './public/assets/module.js',
+    entry: './assets/module.js',
     output: {
         path: path.resolve(__dirname, 'public'),
         filename: 'app.js'
