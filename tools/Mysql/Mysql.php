@@ -38,7 +38,10 @@ class Mysql {
      return $Tables;
   }
 
-  // Renvoie la liste des champs d'une table
+  /**
+   * Renvoie la liste des champs d'une table
+   * @var string $table, le nom de la table 
+   */
   public static function getTableFields(string $table)
   {
      $conn = Mysql::connect();

@@ -1,12 +1,14 @@
 <?php
 
-namespace Helper;
+namespace Helper\Validator;
 
 /**
  * ValidationConstraints Trait
  */
 trait ValidationConstraints
 {
+  
+  public $result;
 
   // Control if data is an url
   private function url()
@@ -14,18 +16,20 @@ trait ValidationConstraints
     if (filter_var($data, FILTER_VALIDATE_URL)) {
       return true;
     }else {
-      return $data . 'is not a valid url';
+      return $data . ' is not a valid url';
     }
   }
 
   // Control if parameter is an email
   private function email($data)
   {
+
      if (filter_var($data, FILTER_VALIDATE_EMAIL)) {
        return true;
      }else {
-       return $data . 'is not a valid email';
+       return $data . ' is not a valid email';
      }
+
   }
 
   // Control if params is string
@@ -57,7 +61,7 @@ trait ValidationConstraints
      }else {
        return 'This field is required';
      }
-  }
+  } 
 
   // Control if parameter is a valid boolean
   private function boolean($data)
@@ -68,8 +72,6 @@ trait ValidationConstraints
       return $data . ' is not a valid boolean';
     }
   }
-
-
 
 
 }

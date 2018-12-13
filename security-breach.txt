@@ -1,0 +1,10 @@
+______________________________________
+FAILLES DE SÉCURITÉ LES PLUS COURANTES 
+______________________________________
+
+---- XXS -----
+
+
+---- CRSF ----
+Le crsf consiste à un utilisateur est de faire excuté du code à un autre utilisateur
+sur un site web en utilisant une url particulière. 

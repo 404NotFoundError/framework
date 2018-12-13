@@ -3,45 +3,22 @@
 namespace Tool\Security;
 
 /**
- * User Interface
+ * UserInterface
  */
 interface UserInterface
 {
 
-   /**
-    * The roles, of user
-    * @var array, $roles
-    */
-   private $roles;
+   public function getEmail();
 
-   /**
-    * User, Password
-    * @var string, $password
-    */
-   private $password;
+   public function setEmail(string $email);
 
+   public function getPassword();
+   
+   public function setPassword(string $password);
+   
+   public function getRoles();
 
-   public function getRoles()
-   {
-      return $this->roles;
-   }
-
-   public function setRoles(array $roles)
-   {
-      $this->roles = $roles;
-      return $this;
-   }
-
-   public function getPassword()
-   {
-      return $this->password;
-   }
-
-   public function setPassword(string $password)
-   {
-      $this->password = $password;
-      return $this;
-   }
-
-
+   public function setRoles(array $roles);
+   
+   
 }

@@ -2,19 +2,20 @@
 
 namespace Tool;
 
-
 /**
  * Mother of Controllers.
  */
 class Controller
 {
+
+  use \Tool\Mysql\MysqlEntityManager;
   
   /**
    * List of parameters
    * @var array, $params
    */
   protected $params = [];
-
+  
   /**
    * List of errors
    * @var array, $errors

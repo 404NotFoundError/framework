@@ -3,13 +3,16 @@
 namespace App\Entity;
 
 use Tool\Entity\EntityInterface;
-use Tool\Entity\UserInterface;
+use Tool\Security\UserInterface;
 
 /**
  * User Class
  */
 class User implements EntityInterface, UserInterface
 {
+  
+  use \Tool\Entity\EntityBundle;
+  use \Tool\Security\SecurityBundle;
 
   /**
    * @var int
@@ -51,9 +54,13 @@ class User implements EntityInterface, UserInterface
     return $this->lastname;
   }
 
+  /**
+   * @var string\User-lastname
+   */
   public function setLastname(string $lastname)
   {
-    return $this->lastname;
+    $this->lastname = $lastname;
+    return $this;
   }
 
   public function getFirstame()
@@ -61,19 +68,27 @@ class User implements EntityInterface, UserInterface
     return $this->firstname;
   }
 
+  /**
+   * @var string\User-firstname
+   */
   public function setFirstname(string $firstname)
   {
-    return $this->firstname;
+    $this->firstname = $firstname;
+    return  $this;
   }
-
+  
   public function getEmail()
   {
     return $this->email;
   }
 
+  /**
+   * @var string\User-email
+   */
   public function setEmail(string $email)
   {
-    return $this->email = $email;
+    $this->email = $email;
+    return $this;
   }
 
   public function getPassword()
@@ -81,19 +96,27 @@ class User implements EntityInterface, UserInterface
     return $this->password;
   }
 
+  /**
+   * @var string\User-password 
+   */
   public function setPassword(string $password)
   {
-    return $this->password = $password;
+    $this->password = $this->passwordCrypt($password);
+    return $this;
   }
 
   public function getRoles()
   {
-    return $this->roles;
+    return  unserialize($this->roles);
   }
 
+  /**
+   * @var array\User-roles 
+   */
   public function setRoles(array $roles)
   {
-    return $this->roles = $roles;
+    $this->roles = serialize($roles);
+    return $this;
   }
 
 

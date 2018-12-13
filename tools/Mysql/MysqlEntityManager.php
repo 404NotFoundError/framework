@@ -77,12 +77,16 @@ trait MysqlEntityManager
       $markers = implode(', ', $markers);
       // Connexion à Mysql
       $conn = Mysql::connect();
+
       // Préparation de la requêtes
       $request = $conn->prepare("INSERT INTO $this->table ($fields) VALUES ($markers)");
+
       // Filtrage des valeurs
       foreach ($values as $key => $value) {
         $request->bindValue(':' . $key , $value, PDO::PARAM_STR);
+        echo $value . "\n\n";
       }
+
       // Execution de la requête
       return $request->execute();
 
@@ -97,11 +101,11 @@ trait MysqlEntityManager
 
        foreach ($condition as $key => $value) {
          if (!isset($value[2])) { $value[2] = ''; }
-         $condition_list[] = $key . ' ' . $value[0] . ' :' .  $key. ' ' . strtoupper($value[2]);
+         $condition_part[] = $key . ' ' . $value[0] . ' :' .  $key. ' ' . strtoupper($value[2]);
          $this->values[$key] = $value[1];
        }
 
-       $this->condition = implode(' ', $condition_list);
+       $this->condition = implode(' ', $condition_part);
 
        return $this;
     }
@@ -130,9 +134,7 @@ trait MysqlEntityManager
       // Préparation de la requete
       $request = $conn->prepare("SELECT * FROM $this->table WHERE $this->condition");
       // Bind
-      foreach ($this->values as $key => $value) {
-        $request->bindValue(':' . $key , $value, PDO::PARAM_STR);
-      }
+      foreach ($this->values as $key => $value) { $request->bindValue(':' . $key , $value, PDO::PARAM_STR); }
       // Exécution de la requete
       $request->execute();
       // On retourne un tableau contenant en objet la liste de réponse
@@ -241,7 +243,7 @@ trait MysqlEntityManager
             $tableFieldName[] = $tablefield['Field'];
           }
 
-          app_debug(array_diff($fields, $tableFieldName));
+          // app_debug(array_diff($fields, $tableFieldName));
 
         }else {
           die('La table n\'existe <strong>' . $table . '</strong> pas');

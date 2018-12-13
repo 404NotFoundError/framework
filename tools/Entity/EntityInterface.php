@@ -8,20 +8,8 @@ namespace Tool\Entity;
 interface EntityInterface
 {
 
-  public function getId()
-  {
-    return $this->id;
-  }
-
-  public function getProperties()
-  {
-
-  }
-
-  public function getValues()
-  {
-
-  }
+  public function getId();
+  
 
 
 }
