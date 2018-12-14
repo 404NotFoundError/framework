@@ -86,14 +86,14 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./assets/defaults/user.scss":
-/*!***********************************!*\
-  !*** ./assets/defaults/user.scss ***!
-  \***********************************/
+/***/ "./assets/defaults/login.scss":
+/*!************************************!*\
+  !*** ./assets/defaults/login.scss ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./assets/defaults/user.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./assets/defaults/login.scss?");
 
 /***/ }),
 
@@ -105,7 +105,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./asse
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _defaults_user_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./defaults/user.scss */ \"./assets/defaults/user.scss\");\n/* harmony import */ var _defaults_user_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_defaults_user_scss__WEBPACK_IMPORTED_MODULE_0__);\n/****************\n   APP STYLES \n ****************/\n\n\n//# sourceURL=webpack:///./assets/module.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _defaults_login_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./defaults/login.scss */ \"./assets/defaults/login.scss\");\n/* harmony import */ var _defaults_login_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_defaults_login_scss__WEBPACK_IMPORTED_MODULE_0__);\n/****************\n   APP STYLES \n ****************/\n\n\n//# sourceURL=webpack:///./assets/module.js?");
 
 /***/ })
 

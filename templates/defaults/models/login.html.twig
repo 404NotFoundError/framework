@@ -1,0 +1,43 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Login{% endblock %}
+
+{% block template %}login{% endblock %}
+
+{% block body %} 
+
+    <header>
+
+    </header>
+
+    <section id="login">
+            <div class="form_login">
+                <form method="POST">
+                    <p>Bienvenue</p>
+                    <span>
+                        <img src="##" alt="Logo"/>
+                    </span>
+                    <div class="login_email">
+                        <span>{{error.input.email}}</span>
+                        <input type="text" name="email" value="{{input.email}}"></input>
+                    </div>
+                    <div class="login_password">
+                        <span>{{error.input.password}}</span>
+                        <input type="password" name="password" value="{{input.password}}">
+                            <span class"show_password">
+                                <img src="##" alt="eyes"/>
+                            </span>
+                        </input>
+                    </div>
+                    <div class="login_validate">
+                        <button type="submit" name="submit" value="">Connexion</button>
+                    </div>
+                </form>
+            </div>
+    </section>
+
+    <footer>
+
+    </footer>
+
+{% endblock %}

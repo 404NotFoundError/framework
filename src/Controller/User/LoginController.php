@@ -60,7 +60,7 @@ class LoginController extends Controller
     }
     
     // TEMPLATES 
-    return $this->view('user/login.html.twig', []);
+    return $this->view('/defaults/models/login.html.twig', []);
 
   }
 

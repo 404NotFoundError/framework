@@ -1,4 +1,4 @@
 /****************
    APP STYLES 
  ****************/
-import './defaults/user.scss';
+import './defaults/login.scss';
