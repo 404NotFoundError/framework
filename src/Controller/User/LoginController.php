@@ -17,9 +17,13 @@ class LoginController extends Controller
   // Log a user 
   public function login()
   {
+    $this->postLogin();
+    return $this->view('/defaults/models/login.html.twig', []);
+  }
 
-    // $_POST['submit'] = "is-submit";
-
+  // Traitement du formuliare de connectetion
+  private function postLogin()
+  {
     // A LA SOUMISSION DU FORMULIARE 
     if (isset($_POST['submit'])){
 
@@ -34,33 +38,23 @@ class LoginController extends Controller
            $user->generateToken();
            // Redirection de l'utilisateur
            if (in_array(['admin'], $user->getRoles())) {
-            
             echo "c'est un admin";
-
            }elseif (in_array(['dev'], $user->getRoles())){
-
             echo "c'est un dev";
-
            }else{
-            
-            echo "Le mot de passe et l'email sont corrects";
-
+            echo "Vous êtes bien connecter";
            }
            
          }else{
-           $this->setErrors('form', ['global' => 'Email ou mot de passe incorect']);
+           $this->setErrors('form',  'Email ou mot de passe incorect');
          }
       }
       // SI LES DONNÉES NE SONT PAS VALIDE
-      else
-      {
+      else{
         $this->setErrors('input', $this->controlPostData());
       }
-
     }
-    
-    // TEMPLATES 
-    return $this->view('/defaults/models/login.html.twig', []);
+
 
   }
 
@@ -70,12 +64,8 @@ class LoginController extends Controller
    */
   private function controlPostData()
   {
-     // Simulation de donné 
-    //  $_POST['email'] = "test@test.fr";
-    //  $_POST['password'] = "test";
-    //  $_POST['test'] = "<script> alert('hello word') </script>";
 
-     // Filtrage des données
+    // Filtrage des données
      $_POST = Validation::filterVar($_POST);
      // Validation des données 
      $validation = new Validation([

@@ -1,6 +1,7 @@
 <?php
 
 /** DEFINED YOUR MIDDLEWARES HERE **/
+
 /*
   Pourquoi j'utilise des middlewares dans cette applications ?
   - De façon générale sur un site web, ont besoin d'effectuer certaines

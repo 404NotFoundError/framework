@@ -11,15 +11,18 @@ class RouteLoader
   /**
    * @param array, $routes
    */
-  public function __construct(array $routes)
+  public function __construct(array $routes) 
   {
+    
      define('APP_ROUTES', $routes);
      $method = $_SERVER['REQUEST_METHOD'];
-     foreach ($routes[$method] as $key => $route) {
+     foreach ($routes as $key => $route) {
        /* On va vérifier s'il des paramètres dans la route et le reformater à l'aide de l'url couante si c'est le cas */
        $data = $this->formatRequestIfParamsExist($route['path']);
        /* Si on trouve une route on charge le controlleur et sort de la boucle */
        if (isset($_SERVER['PATH_INFO']) && $_SERVER['PATH_INFO'] === $data['route'] || $_SERVER['REQUEST_URI'] === $data['route']) {
+         /* On vérifie si le client est connecter à la bonne méthode */
+        //  $this->getMethod($route);
          define('APP_ROUTE', $route);
          /* On regarde si la route à de smiddlewares, si oui on les gère */
          if (isset($route['middlewares'])) $this->loadMiddlewares($route['middlewares']);
@@ -38,10 +41,25 @@ class RouteLoader
       if (APP_MODE === 'dev') {
         die('Aucune route n\' a été trouvé pour: <strong>' . $_SERVER['REQUEST_URI'] . '</strong>');
       }else {
-        return http_response_code(404);
+        http_response_code(404);
         exit();
       }
 
+  }
+
+  /**
+   * @param array $route
+   */
+  private function getMethod(array $route) : bool
+  {
+    // On vérifie que la méthode envoyer fait partir de la liste des méthodes convenue pour la route
+    if (in_array($_SERVER['REQUEST_METHOD'], $route['methods'])){
+      return true;
+    }else {
+      http_response_code(404);
+      exit();
+    }
+    
   }
 
   // TODO:

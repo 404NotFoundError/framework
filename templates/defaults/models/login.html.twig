@@ -7,19 +7,21 @@
 {% block body %} 
 
     <header>
-
+    
     </header>
 
     <section id="login">
             <div class="form_login">
-                <form method="POST">
+                <form action="/login" method="POST">
                     <p>Bienvenue</p>
                     <span>
                         <img src="##" alt="Logo"/>
                     </span>
+                    {# Erreur global pour le formuliare  #}
+                    <span> {{ error.form }} </span>
                     <div class="login_email">
-                        <span>{{error.input.email}}</span>
-                        <input type="text" name="email" value="{{input.email}}"></input>
+                        <span>{{error.input.email}}</span> 
+                        <input type="text" name="email" value="{{ input.email }}"></input>
                     </div>
                     <div class="login_password">
                         <span>{{error.input.password}}</span>

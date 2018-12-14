@@ -14,12 +14,7 @@ class Router
    * List of routes
    * @var array, $routes
    */
-  private $routes = [
-    'GET'    => [],
-    'POST'   => [],
-    'PUT'    => [],
-    'DELETE' => []
-  ];
+  private $routes = [];
 
   /**
    *
@@ -40,7 +35,7 @@ class Router
    * @var string, $action
    * @return Router
    */
-  public function create(string $method, string $path, string $action)
+  public function create(array $method, string $path, string $action)
   {
     /** save path in route list **/
     $this->save($method, $path);
@@ -57,18 +52,25 @@ class Router
    */
   private function save($method, $newRoute)
   {
+
+    // app_debug($this->routes);
+    // app_debug($method, 1);
+
     /* Si on est en mode dev on vérifie si la route n'existe pas déjà */
-    if (APP_MODE === 'dev' || APP_MODE === 'development') {
-      foreach ($this->routes[$method] as $key => $value) {
+    if (APP_MODE === 'dev') {
+
+      foreach ($this->routes as $key => $value) {
         if ($value['path'] === $newRoute) die('The route  <strong>"' . $newRoute . '"</strong> already exist');
       }
+
     };
 
     /* Si le chemin n'existe pas dans la liste des routes */
-    $index = count($this->routes[$method]);
-    $this->routes[$method][$index]['path'] = $newRoute;
-    /* Le chemin de la route actuel est */
+    $index = count($this->routes);
     $this->method = $method;
+    $this->routes[$index]['methods'] = $this->method;
+    $this->routes[$index]['path'] = $newRoute;
+    /* Le chemin de la route actuel est */
     $this->offset = $index;
 
     /* On retorune l'instance */
@@ -84,8 +86,8 @@ class Router
   {
      $data = explode('@', $action);
      if (isset($data[1])) {
-       $this->routes[$this->method][$this->offset]['controller'] = $data[0];
-       $this->routes[$this->method][$this->offset]['action'] = $data[1];
+       $this->routes[$this->offset]['controller'] = $data[0];
+       $this->routes[$this->offset]['action'] = $data[1];
      }else {
        die('<strong> "' . $action . '" </strong> is not a correct format, Try like this <strong> controllerName@methodName <strong>.');
      }
@@ -98,7 +100,7 @@ class Router
    */
   public function name(string $name)
   {
-    $this->routes[$this->method][$this->offset]['name'] = $name;
+    $this->routes[$this->offset]['name'] = $name;
     return $this;
   }
 
@@ -109,7 +111,7 @@ class Router
    */
   public function description(string $description)
   {
-    $this->routes[$this->method][$this->offset]['description'] = $description;
+    $this->routes[$this->offset]['description'] = $description;
     return $this;
   }
 
@@ -120,7 +122,7 @@ class Router
    */
   public function middleware(array $middlewares)
   {
-    $this->routes[$this->method][$this->offset]['middlewares'] = $middlewares;
+    $this->routes[$this->offset]['middlewares'] = $middlewares;
     return $this;
   }
 

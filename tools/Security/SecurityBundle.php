@@ -17,7 +17,7 @@ trait SecurityBundle
     {
         return password_hash($password, PASSWORD_BCRYPT, ['cost' => 12]);
     }
-
+    
     /**
      * Vérifie le hashage d'un mot de passe. 
      * @param string, $password

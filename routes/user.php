@@ -3,11 +3,15 @@
 /*** User Routes ***/
 
 // Login
-$route->create('GET', '/login', 'User\LoginController@login')
-      ->name('Connection')
-      ->description('Login to app');
+$route->create(['GET', 'POST'], '/login', 'User\LoginController@login')
+      ->name('Connection page')
+      ->description('Login to app')
+      ->middleware([]);
+
+$route->create(['POST'], '/login-post', 'User\LoginController@postLogin')
+      ->name('Connection form treatment');
 
 // Registration 
-$route->create('GET', '/user/register', 'User\RegisterController@register')
+$route->create(['GET'], '/user/register', 'User\RegisterController@register')
       ->name('Inscription')
       ->description('Formulaire d\'inscription');

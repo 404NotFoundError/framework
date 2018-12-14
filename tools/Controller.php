@@ -9,7 +9,7 @@ use Helper\Validator\Validation;
  */
 class Controller
 {
-
+  
   use \Tool\Mysql\MysqlEntityManager;
   
   /**
@@ -48,11 +48,11 @@ class Controller
   }
 
   /**
-   * Filtre toutes les données post et get et les renvoies dans un tableau
-   * Cette fonction à étét cerrer pour garder les contenu des formuliare dans leurs champs après la soumission
+   * Filtre toutes les données post et get et les renvoies dans un tableau.
+   * Cette fonction à étét cerrer pour garder les contenu des formuliare dans leurs champs après la soumission.
    * @return array
    */
-  protected function filterPostGetData()
+  protected function filterPostGetData() 
   {
 
     $data = [];
