@@ -50,16 +50,19 @@ class Controller
   /**
    * Filtre toutes les données post et get et les renvoies dans un tableau
    * Cette fonction à étét cerrer pour garder les contenu des formuliare dans leurs champs après la soumission
-   * @return array\$_POST-$_GET
+   * @return array
    */
   protected function filterPostGetData()
   {
+
+    $data = [];
+
     $_POST = Validation::filterVar($_POST);
     $_GET  = Validation::filterVar($_GET);
-
-    foreach ($_GET as $key => $value) { $data[$key] = $value; }
+    
     foreach ($_POST as $key => $value) { $data[$key] = $value; }
-
+    foreach ($_GET as $key => $value) { $data[$key] = $value; }
+    
     return $data;
 
   }

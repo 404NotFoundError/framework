@@ -42,17 +42,25 @@ class Validation
      // On retorune le résultat sous forme de tableau.
      return $this->errors = $response;
   }
-
+  
   /**
    * Filtre les entrées
    * @param array $variables,
+   * @return array $data, liste des données filter
    */
   public static function filterVar(array $variables)
   {
-     foreach ($variables as $key => $value) {
-       $data[$key] = filter_var($value, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+     $data = [];
+
+     if (!empty($variables)) {
+      foreach ($variables as $key => $value) {
+        $data[$key] = filter_var($value, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+      }
      }
+
      return $data;
+
+
   }
 
 
