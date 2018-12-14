@@ -6,10 +6,6 @@ use PDO;
 use Tool\Mysql\Mysql;
 
 
-/**
- * MysqlEntityManager Trait
- * by Adebayo HOUNTONDJI
- */
 trait MysqlEntityManager
 {
 
@@ -242,8 +238,6 @@ trait MysqlEntityManager
           foreach ($tablefields as $key => $tablefield) {
             $tableFieldName[] = $tablefield['Field'];
           }
-
-          // app_debug(array_diff($fields, $tableFieldName));
 
         }else {
           die('La table n\'existe <strong>' . $table . '</strong> pas');

@@ -2,6 +2,8 @@
 
 namespace Tool;
 
+use Helper\Validator\Validation;
+
 /**
  * Mother of Controllers.
  */
@@ -25,22 +27,41 @@ class Controller
   /**
    * Add new errors in error list
    * @var string $key, Error name
-   * @var string $message, Error description
+   * @var string-array $message, Error description
    */
-  protected function setErrors(string $key, string $value)
+  protected function setErrors(string $key, $value)
   {
     return $this->errors[$key] = $value;
   }
-
+  
   /**
-   * @var array\Request-pamaeters
+   * Renvoie une liste de paramètre pour les utilisateurs
+   * @var array\Request-parameters
    */
   public function setParams(array $params)
   {
     foreach ($params as $key => $param) {
       $params[$key] = filter_var($param, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     }
-    return $this->params = $params;
+    
+    return $this->params[] = $params;
+  }
+
+  /**
+   * Filtre toutes les données post et get et les renvoies dans un tableau
+   * Cette fonction à étét cerrer pour garder les contenu des formuliare dans leurs champs après la soumission
+   * @return array\$_POST-$_GET
+   */
+  protected function filterPostGetData()
+  {
+    $_POST = Validation::filterVar($_POST);
+    $_GET  = Validation::filterVar($_GET);
+
+    foreach ($_GET as $key => $value) { $data[$key] = $value; }
+    foreach ($_POST as $key => $value) { $data[$key] = $value; }
+
+    return $data;
+
   }
 
   /**
@@ -51,7 +72,9 @@ class Controller
   protected function view(string $template, array $parameters)
   {
       // On ajoute la liste des erreurs
-      array_push($parameters, $this->errors);
+      $parameters['error'] = $this->errors;
+      // On ajoute la liste des données POST et GET échapper.
+      $parameters['input'] = $this->filterPostGetData();
       // Load twig classes.
       require_once '../vendor/twig/twig/lib/Twig/Loader/Filesystem.php';
       require_once '../vendor/twig/twig/lib/Twig/Environment.php';

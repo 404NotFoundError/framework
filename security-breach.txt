@@ -2,9 +2,52 @@ ______________________________________
 FAILLES DE SÉCURITÉ LES PLUS COURANTES 
 ______________________________________
 
----- XXS -----
+Si développer son site internet est aujourd’hui une pratique facile grâce 
+aux CMS tel que wordpress, les bonnes pratiques en matière de sécurité ne 
+suivent pas. C'est dans la prespective de répondre à ce déficit en matière
+de sécurité que ce framework gère un grand nombre de faille de sécurité dont 
+les plus courant dans le secteur du web.
 
+Pour commencer, il est important de savoir qu'une faille est une fai-
+blesse présente dans un programme informatique et pouvant être utilisée 
+dans l'objectif détourner cette dernière de ses fonctions principales.
+
+Voici la liste des failles de sécurité gerer pas se framework.
+
+---- INJECTION SQL ----
+Le cette consiste pour un utilisateur malveillant, à injecter des mor-
+ceaux des morceaux de code non filtrer pour détourner la requête pré-
+vue à être executer par une application.
+Dans le cadre de php et mysql, il suffit de préparer les requêtes et 
+forcer le code à traiter les données uniquement comme du texte.
+
+---- INCLUDE ----
+Il s’agit d’une faille très dangereuse. Comme son nom l’indique, elle
+ exploite une mauvaise utilisation de la fonction include. La plupart 
+ du temps, cette fonction est utilisée pour exécuter du code PHP qui 
+ se situe dans une autre page, permettant de se connecter à une base 
+ de données. Il existe deux types de failles include : la faille in-
+ clude à distance et celle en local.
+Pour regler le problème il faut faire des "require" et même de préfé-
+rence des "require_once".
+
+---- XXS -----
+Consiste pour un utilisateur malveillant à envoyer du code dans un 
+formuliare à la place de donnée qui lui sont demandée. 
+Pour regler le problème il faut valider les données demandée et no-
+tament échapper ces dernières.
 
 ---- CRSF ----
-Le crsf consiste à un utilisateur est de faire excuté du code à un autre utilisateur
-sur un site web en utilisant une url particulière. 
+Le crsf consiste à un utilisateur est de faire excuté du code à un 
+autre utilisateur sur un site web en utilisant une url particulière. 
+Pour regler le problème il faut génerer un jeton de sécurité pour 
+pour l'utilisateur dès sa connexion sue le site. Les jetons doivent 
+être stokés sur la machine de l'utilisateur donc en session ou en 
+cookie (cookie de préférence).
+
+---- ATTAQUE PAR FORCE BRUT ----
+
+
+---- LA FAILLE UPLOAD ----
+
+

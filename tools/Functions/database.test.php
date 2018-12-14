@@ -19,8 +19,6 @@ function app_test_database()
         'tables'  => []
       ];
 
-      app_debug($response);
-
     } catch (PDOException $e) {
        echo "<strong> Problème de connexion à la base de donnée </strong>";
        print "Erreur !: " . $e->getMessage() . "<br/><br/>";

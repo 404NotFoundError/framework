@@ -7,7 +7,7 @@ namespace Helper\Validator;
  */
 class Validation
 {
-
+  
   use ValidationConstraints;
 
   /**
@@ -20,7 +20,6 @@ class Validation
    * Validation de données.
    * @param array, $data, exemple : ['email' => [$_POST['email'], 'email'], 'password' => [$_POST['password'], 'required|integer']]
    * @return object\Validation-result 
-   * 
    */
   public function __construct(array $data)
   {
@@ -32,14 +31,17 @@ class Validation
        // On exécute la fonction pour vérifier chaque contrainte.
        foreach ($contraints as $key_contraints => $value_contraints) {
          // On la donnée n'est pas valider on renvoie une erreur
-         if ($this->$value_contraints($value[0]) !== true){ $response[$key][$key_contraints] = $this->$value_contraints($value[0]);}
+         if ($this->$value_contraints($value[0]) !== true){
+           /* Imposer plusieurs contraintes sous entends qu'on peut avoir plusieurs. Du coup on renvoie une erreur 
+           par contrainte pour avoir un tableau facile à utiliser en front */ 
+           !isset($response[$key]) ?  $response[$key] = $this->$value_contraints($value[0]) : true;
+          }
        }
        
      }
      // On retorune le résultat sous forme de tableau.
      return $this->errors = $response;
   }
-
 
   /**
    * Filtre les entrées
@@ -52,11 +54,6 @@ class Validation
      }
      return $data;
   }
-
-  
-
-
-
 
 
 
