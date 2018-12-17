@@ -29,11 +29,6 @@ define('DB_PORT', 3306);
 define('DB_CHARSET', 'Utf8');
 
 /***************************
-  DEPLOYEMENT CONFIGURATION
+   SECURITY CONFIGURATION
 ****************************/
-
-define('SSH_USER', 'roomovhagj');
-define('SSH_HOST', 'ssh.cluster026.hosting.ovh.net');
-define('SSH_PORT', '22');
-define('SSH_PASS', 'is-Adebayo-1');
-define('SSH_ROOT', 'test');
+define('DEFAULT_ROOT', '/');

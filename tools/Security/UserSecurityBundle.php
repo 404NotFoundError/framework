@@ -7,8 +7,9 @@ use App\Entity\User;
 /**
  * SecurityBundle Trait
  */
-trait SecurityBundle
+trait UserSecurityBundle
 {
+
     /**
      * Crypt les mots de passes
      * @param string $password 
@@ -26,28 +27,11 @@ trait SecurityBundle
      */
     public function isEqualPassword(string $password)
     {
-        if (password_verify($password, $this->password))
-        {
+        if (password_verify($password, $this->password)){
             return true;
-        }
-        else 
-        {
+        } else {
             return false;
         }
-    }
-
-    /**
-     * Génération de token pour un utilisateur lors de sa connection 
-     * Protection contre la faille crsf 
-     */
-    public function generateToken()
-    {   
-
-        if (!isset($_COOKIE['user_token'])) {
-            $token = time() * rand(1, 9999); 
-            setcookie('user_token', $token, time() + 60 * 60 * 24 * 7 * 4);
-        } 
-              
     }
 
     /**
@@ -56,12 +40,9 @@ trait SecurityBundle
      */
     public function authentification()
     {
-        if (isset($_COOKIE['user_token'])) 
-        {
+        if (isset($_COOKIE['user_token'])) {
             return true;
-        }
-        else
-        {
+        } else {
             return false;
         }
     }
@@ -73,7 +54,6 @@ trait SecurityBundle
     public function deniedAccess(array $roles)
     {
         // On vérifie d'abord si l'utilisateur est connecter 
-
     }
 
 

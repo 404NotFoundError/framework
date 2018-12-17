@@ -2,16 +2,21 @@
 
 /*** User Routes ***/
 
-// Login
-$route->create(['GET', 'POST'], '/login', 'User\LoginController@login')
-      ->name('Connection page')
-      ->description('Login to app')
+// Default Home
+$route->create(['GET'], '/', 'HomeController@index')
+      ->name('home-page')
+      ->description('Page d\'acceuil de site pour visiteur')
       ->middleware([]);
 
-$route->create(['POST'], '/login-post', 'User\LoginController@postLogin')
-      ->name('Connection form treatment');
+// Login
+$route->create(['GET', 'POST'], '/login', 'User\LoginController@login')
+      ->name('login-page')
+      ->description('Page de connection de l\'application')
+      ->middleware([]);
 
 // Registration 
-$route->create(['GET'], '/user/register', 'User\RegisterController@register')
-      ->name('Inscription')
-      ->description('Formulaire d\'inscription');
+$route->create(['GET', 'POST'], '/register', 'User\RegisterController@register')
+      ->name('register-page')
+      ->description('Inscription d\'un membre')
+      ->middleware([]);
+

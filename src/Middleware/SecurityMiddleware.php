@@ -8,6 +8,8 @@ namespace App\Middleware;
 class SecurityMiddleware
 {
 
+   
+
    /**
     * Vérifie si l'utilisateur est connecter
     * @return bool

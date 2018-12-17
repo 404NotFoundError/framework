@@ -3,12 +3,16 @@
 namespace Tool\Cache;
 
 /**
- *
+ * Système de cache de données
  */
 class CacheSystem
 {
 
-  public function __construct(string $dirname, int $duration)
+  /**
+   * @param string $filePath, Le chemin pour stocket le ficher
+   * @param int le temps de stockage du ficher
+   */
+  public function __construct(string $filePath, int $duration = null) 
   {
 
     return $this;
@@ -20,7 +24,7 @@ class CacheSystem
    */
   public function read()
   {
-
+      
   }
 
   /**

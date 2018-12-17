@@ -48,28 +48,32 @@ class Validation
    * @param array $variables,
    * @return array $data, liste des données filter
    */
-  public static function filterVar(array $variables)
+  public static function filterVar(array $array)
   {
-     $data = [];
-
-     if (!empty($variables)) {
-      foreach ($variables as $key => $value) {
+    $data = [];
+    foreach ($array as $key => $value) {
+      if (is_array($value)){
+        $data[$key] = parent::recursivefilter($value);
+      }else{
         $data[$key] = filter_var($value, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
       }
-     }
+    }
 
-     return $data;
-
+    return $data;
 
   }
 
-
-
-
-
-
-
-
+  public static function recursivefilter($data)
+  {
+    foreach ($data as $key => $value) {
+      if (is_array($value)){
+        $data[$key] = recursive($value);
+      }else{
+        $data[$key] = filter_var($value, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+      }
+    }
+    return $data;
+  }
 
 
 }

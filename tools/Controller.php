@@ -3,6 +3,7 @@
 namespace Tool;
 
 use Helper\Validator\Validation;
+use Tool\Security\FailureSecurityBundle;
 
 /**
  * Mother of Controllers.
@@ -24,6 +25,7 @@ class Controller
    */
   protected $errors = [];
 
+
   /**
    * Add new errors in error list
    * @var string $key, Error name
@@ -43,28 +45,7 @@ class Controller
     foreach ($params as $key => $param) {
       $params[$key] = filter_var($param, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     }
-    
     return $this->params[] = $params;
-  }
-
-  /**
-   * Filtre toutes les données post et get et les renvoies dans un tableau.
-   * Cette fonction à étét cerrer pour garder les contenu des formuliare dans leurs champs après la soumission.
-   * @return array
-   */
-  protected function filterPostGetData() 
-  {
-
-    $data = [];
-
-    $_POST = Validation::filterVar($_POST);
-    $_GET  = Validation::filterVar($_GET);
-    
-    foreach ($_POST as $key => $value) { $data[$key] = $value; }
-    foreach ($_GET as $key => $value) { $data[$key] = $value; }
-    
-    return $data;
-
   }
 
   /**
@@ -77,8 +58,13 @@ class Controller
       // On ajoute la liste des erreurs
       $parameters['error'] = $this->errors;
       // On ajoute la liste des données POST et GET échapper.
-      $parameters['input'] = $this->filterPostGetData();
-      // Load twig classes.
+      $parameters['post'] = $_POST;
+      $parameters['get']  = $_GET;
+      // On renvoie le jeton de l'utilisateur pour qu'il puisse être utiliser en dans les formuliares.
+      if (isset($_SESSION['token'])) {
+        $parameters['user']['token'] = $_SESSION['token'];
+      }
+      // Require twig classes.
       require_once '../vendor/twig/twig/lib/Twig/Loader/Filesystem.php';
       require_once '../vendor/twig/twig/lib/Twig/Environment.php';
       // Default path of templates
@@ -90,7 +76,6 @@ class Controller
       // Render
       echo $twig->render($template, $parameters);
   }
-
 
 
 }

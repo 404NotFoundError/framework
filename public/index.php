@@ -8,21 +8,30 @@ require_once __dir__ . '/../vendor/autoload.php';
 
 require_once __dir__ . '/../config.php';
 
-if(APP_MODE === 'dev') ini_set('display_errors', 'on');
+// Modules de dévelopement 
+if(APP_MODE === 'dev') {
+    // On active le mode display error
+    ini_set('display_errors', 'on');
+    // On reccupère tout les outils de dev du framework
+    $functions = glob(__dir__ . '/../tools/Functions/*php');
+    // On inclus tous les outils de dev du framework
+    foreach ($functions as $key => $function) { require_once $function; }
+}
 
+// Securitu Faillure Manage
+Tool\Security\FailureSecurityBundle::generateToken();
+Tool\Security\FailureSecurityBundle::filterEntry();
+Tool\Security\FailureSecurityBundle::generateTicket(DEFAULT_ROOT);
+
+// Récupération de la liste des middlewares de l'application
 require_once __dir__ . '/../routes/middlewares.php';
 
-$functions = glob(__dir__ . '/../tools/Functions/*php');
-
-foreach ($functions as $key => $function) { require_once $function; }
-
+// Activation du Router
 $route = new Tool\Route\Router();
 
-/** get routes file **/
+// Récupération de la liste des routes
 $routesFilesList = glob(__dir__ . '/../routes/*php');
-
-/** require route file **/
 foreach ($routesFilesList as $key => $file) { require_once $file; }
 
-/** Load routes **/
+// Activation du système de routage
 $app = new Tool\Route\RouteLoader($route->getRoutes());

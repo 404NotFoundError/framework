@@ -12,7 +12,7 @@ class User implements EntityInterface, UserInterface
 {
   
   use \Tool\Entity\EntityBundle;
-  use \Tool\Security\SecurityBundle;
+  use \Tool\Security\UserSecurityBundle;
 
   /**
    * @var int

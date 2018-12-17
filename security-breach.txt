@@ -43,7 +43,13 @@ autre utilisateur sur un site web en utilisant une url particulière.
 Pour regler le problème il faut génerer un jeton de sécurité pour 
 pour l'utilisateur dès sa connexion sue le site. Les jetons doivent 
 être stokés sur la machine de l'utilisateur donc en session ou en 
-cookie (cookie de préférence).
+cookie (session de préférence).
+
+---- LE VOL DE SESSION ----
+Lors de la connexion d'un utiliseur à un site web, un identitifiant 
+unique coresspondant à son identitifiant de session, lui est attribué :
+c'est le cas du cookie PHPSESSID dans le cadre de php. 
+
 
 ---- ATTAQUE PAR FORCE BRUT ----
 

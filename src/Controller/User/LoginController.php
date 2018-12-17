@@ -8,8 +8,7 @@ use App\EntityManager\UserManager;
 use Helper\Validator\Validation;
 
 /**
- * Gestion de la connecter de l'utilisateur 
- * LoginController Class
+ * Gestion de la connection de l'utilisateur 
  */
 class LoginController extends Controller
 {
@@ -17,7 +16,9 @@ class LoginController extends Controller
   // Log a user 
   public function login()
   {
+    // Traitement du formuliare de connexion
     $this->postLogin();
+    // Rendue de la vue
     return $this->view('/defaults/models/login.html.twig', []);
   }
 
@@ -26,13 +27,10 @@ class LoginController extends Controller
   {
     // A LA SOUMISSION DU FORMULIARE 
     if (isset($_POST['submit'])){
-
       // SI LES DONNÉES SONT VALIDES
       if (empty($this->controlPostData())){
-
          // On vérifie si l'addresse email est valide et que cette dernière correspond à l'email 
          $user = $this->getTable(User::class)->search(['email' => ['=', $_POST['email']]])->getOne();
-
          if ($user && $user->isEqualPassword($_POST['password'])) {
            // Génération de token pour l'utilisateur
            $user->generateToken();
@@ -44,9 +42,8 @@ class LoginController extends Controller
            }else{
             echo "Vous êtes bien connecter";
            }
-           
          }else{
-           $this->setErrors('form',  'Email ou mot de passe incorect');
+           $this->setErrors('form',  'Email et (ou) mot de passe incorrect');
          }
       }
       // SI LES DONNÉES NE SONT PAS VALIDE
@@ -54,7 +51,6 @@ class LoginController extends Controller
         $this->setErrors('input', $this->controlPostData());
       }
     }
-
 
   }
 
@@ -65,16 +61,12 @@ class LoginController extends Controller
   private function controlPostData()
   {
 
-    // Filtrage des données
-     $_POST = Validation::filterVar($_POST);
      // Validation des données 
      $validation = new Validation([
        'email'    => [$_POST['email'], 'required|email'],
        'password' => [$_POST['password'], 'required']
      ]);
-
      return $validation->errors;
-     
   }
 
 
