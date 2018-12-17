@@ -86,14 +86,14 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./assets/defaults/login.scss":
-/*!************************************!*\
-  !*** ./assets/defaults/login.scss ***!
-  \************************************/
+/***/ "./assets/defaults/styles/login.scss":
+/*!*******************************************!*\
+  !*** ./assets/defaults/styles/login.scss ***!
+  \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./assets/defaults/login.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./assets/defaults/styles/login.scss?");
 
 /***/ }),
 
@@ -105,7 +105,18 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./asse
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _defaults_login_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./defaults/login.scss */ \"./assets/defaults/login.scss\");\n/* harmony import */ var _defaults_login_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_defaults_login_scss__WEBPACK_IMPORTED_MODULE_0__);\n/****************\n   APP STYLES \n ****************/\n\n\n//# sourceURL=webpack:///./assets/module.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _defaults_styles_login_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./defaults/styles/login.scss */ \"./assets/defaults/styles/login.scss\");\n/* harmony import */ var _defaults_styles_login_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_defaults_styles_login_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _sass_all_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sass/_all.scss */ \"./assets/sass/_all.scss\");\n/* harmony import */ var _sass_all_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_sass_all_scss__WEBPACK_IMPORTED_MODULE_1__);\n/****************\n   APP STYLES \n ****************/\n\n\n\n//# sourceURL=webpack:///./assets/module.js?");
+
+/***/ }),
+
+/***/ "./assets/sass/_all.scss":
+/*!*******************************!*\
+  !*** ./assets/sass/_all.scss ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./assets/sass/_all.scss?");
 
 /***/ })
 

@@ -1,4 +1,5 @@
 /****************
    APP STYLES 
  ****************/
-import './defaults/login.scss';
+import './defaults/styles/login.scss';
+import './sass/_all.scss';

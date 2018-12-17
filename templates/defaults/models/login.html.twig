@@ -11,31 +11,57 @@
     </header>
 
     <section id="login">
-            <div class="form_login">
-                <form action="/login" method="POST">
-                    <p>Bienvenue</p>
-                    <span>
-                        <img src="##" alt="Logo"/>
-                    </span>
-                    {# Erreur global pour le formuliare  #}
-                    <span> {{ error.form }} </span>
-                    <div class="login_email">
-                        <span>{{error.input.email}}</span> 
-                        <input type="text" name="email" value="{{ input.email }}"></input>
+
+        <div class="form_login">
+
+            <form action="/login" method="POST">
+
+                <p>Bienvenue</p>
+
+                <span class="span_logo">
+                    <img src="##" alt="Adita"/>
+                </span>
+
+                {# Erreur global pour le formuliare  #}
+                <span> {{ error.form }} </span>
+
+                <div class="login_email">
+
+                    <span class="error_email">{{error.input.email}}</span> 
+                    <input class="input_email"type="text" name="email" value="{{ input.email }}"></input>
+                    <span class="span_email" data-placeholder="Email"></span>
+                    
+                </div>
+
+                <div class="login_password">
+
+                    <span class="error_email">{{error.input.password}}</span>
+                    <input class="input_password" type="password" name="password" value="{{input.password}}"></input>
+                    <span class="span_password" data-placeholder="Mot de passe"></span>
+
+                </div>
+
+                <div class="login_forget">
+
+                    <a href="##">Mot de passe oublié ?</a>
+
+                </div>
+
+                <div class="login_validate">
+
+                    <div class ="bg_validate">
+
+                        <div class="bg_button"></div>
+                        <button class="button_validate" type="submit" name="submit" value="">Connexion</button>
+                    
                     </div>
-                    <div class="login_password">
-                        <span>{{error.input.password}}</span>
-                        <input type="password" name="password" value="{{input.password}}">
-                            <span class"show_password">
-                                <img src="##" alt="eyes"/>
-                            </span>
-                        </input>
-                    </div>
-                    <div class="login_validate">
-                        <button type="submit" name="submit" value="">Connexion</button>
-                    </div>
-                </form>
-            </div>
+
+                </div>
+
+            </form>
+
+        </div>
+        
     </section>
 
     <footer>

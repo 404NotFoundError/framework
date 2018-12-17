@@ -1,5 +1,266 @@
 body.login #login {
-  width: 100vh;
-  height: 100vh;
-  background-color: #ddd; }
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: #f2f2f2; }
+  body.login #login .form_login {
+    width: 330px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 60px 30px;
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1); }
+    body.login #login .form_login form {
+      width: 100%; }
+      body.login #login .form_login form p {
+        display: block;
+        font-size: 30px;
+        color: #333333;
+        line-height: 1.2;
+        text-align: center;
+        padding-bottom: 26px; }
+      body.login #login .form_login form .span_logo {
+        display: block;
+        font-size: 30px;
+        color: #333333;
+        line-height: 1.2;
+        text-align: center;
+        padding-bottom: 48px; }
+      body.login #login .form_login form .login_email {
+        width: 100%;
+        position: relative;
+        border-bottom: 2px solid #adadad;
+        margin-bottom: 37px;
+        position: relative; }
+        body.login #login .form_login form .login_email .error_email {
+          margin: 10px 0;
+          color: #880820; }
+        body.login #login .form_login form .login_email .input_email {
+          font-size: 20px;
+          color: #555555;
+          line-height: 1.2;
+          display: block;
+          width: 100%;
+          height: 45px;
+          background: transparent;
+          padding: 0 5px; }
+        body.login #login .form_login form .login_email .span_email {
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          pointer-events: none; }
+          body.login #login .form_login form .login_email .span_email::before {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            -webkit-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+            transition: all 0.4s;
+            background: #880820;
+            background: -webkit-linear-gradient(-135deg, #880820, #333, #880820, #333);
+            background: -o-linear-gradient(-135deg, #880820, #333, #880820, #333);
+            background: -moz-linear-gradient(-135deg, #880820, #333, #880820, #333);
+            background: linear-gradient(-135deg, #880820, #333, #880820, #333); }
+          body.login #login .form_login form .login_email .span_email::after {
+            content: attr(data-placeholder);
+            font-size: 15px;
+            color: #999999;
+            line-height: 1.2;
+            display: block;
+            width: 0;
+            position: absolute;
+            top: 16px;
+            left: 0px;
+            padding-left: 5px;
+            -webkit-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+            transition: all 0.4s; }
+        body.login #login .form_login form .login_email .input_email:focus + .span_email::after {
+          top: -15px; }
+        body.login #login .form_login form .login_email .input_email:focus + .span_email::after {
+          width: 100%; }
+        body.login #login .form_login form .login_email .has-val.input_email + .span_email::after {
+          top: -15px; }
+        body.login #login .form_login form .login_email .has-val.input_email + .span_email::after {
+          width: 100%; }
+      body.login #login .form_login form .login_password {
+        width: 100%;
+        position: relative;
+        border-bottom: 2px solid #adadad;
+        margin-bottom: 37px;
+        position: relative; }
+        body.login #login .form_login form .login_password .error_email {
+          margin: 10px 0;
+          color: #880820; }
+        body.login #login .form_login form .login_password .input_password {
+          font-size: 20px;
+          color: #555555;
+          line-height: 1.2;
+          display: block;
+          width: 100%;
+          height: 45px;
+          background: transparent;
+          padding: 0 5px; }
+        body.login #login .form_login form .login_password .span_password {
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          pointer-events: none; }
+          body.login #login .form_login form .login_password .span_password::before {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            -webkit-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+            transition: all 0.4s;
+            background: #880820;
+            background: -webkit-linear-gradient(-135deg, #880820, #333, #880820, #333);
+            background: -o-linear-gradient(-135deg, #880820, #333, #880820, #333);
+            background: -moz-linear-gradient(-135deg, #880820, #333, #880820, #333);
+            background: linear-gradient(-135deg, #880820, #333, #880820, #333); }
+          body.login #login .form_login form .login_password .span_password::after {
+            content: attr(data-placeholder);
+            font-size: 15px;
+            color: #999999;
+            line-height: 1.2;
+            display: block;
+            width: 100%;
+            position: absolute;
+            top: 16px;
+            left: 0px;
+            padding-left: 5px;
+            -webkit-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+            transition: all 0.4s; }
+        body.login #login .form_login form .login_password .input_password:focus + .span_password::after {
+          top: -15px; }
+        body.login #login .form_login form .login_password .input_password:focus + .span_password::after {
+          width: 100%; }
+        body.login #login .form_login form .login_password .has-val.input_password + .span_password::after {
+          top: -15px; }
+        body.login #login .form_login form .login_password .has-val.input_password + .span_password::after {
+          width: 100%; }
+      body.login #login .form_login form .login_forget {
+        text-align: end; }
+        body.login #login .form_login form .login_forget a {
+          text-decoration: none;
+          color: #999999; }
+      body.login #login .form_login form .login_validate {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 40px; }
+        body.login #login .form_login form .login_validate .bg_validate {
+          width: 100%;
+          display: block;
+          position: relative;
+          z-index: 1;
+          border-radius: 25px;
+          width: auto;
+          overflow: hidden;
+          margin: 0 auto; }
+          body.login #login .form_login form .login_validate .bg_validate:hover .bg_button {
+            left: 0; }
+          body.login #login .form_login form .login_validate .bg_validate .bg_button {
+            position: absolute;
+            z-index: -1;
+            width: 300%;
+            height: 100%;
+            border-top: solid 1px #fff;
+            border-bottom: solid 1px #fff;
+            background: -webkit-linear-gradient(-135deg, #880820, #333, #880820, #333);
+            background: -o-linear-gradient(-135deg, #880820, #333, #880820, #333);
+            background: -moz-linear-gradient(-135deg, #880820, #333, #880820, #333);
+            background: linear-gradient(-135deg, #880820, #333, #880820, #333);
+            top: 0;
+            left: -100%;
+            -webkit-transition: all 0.7s;
+            -o-transition: all 0.7s;
+            -moz-transition: all 0.7s;
+            transition: all 0.7s; }
+          body.login #login .form_login form .login_validate .bg_validate .button_validate {
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            min-width: 244px;
+            height: 50px;
+            font-size: 16px;
+            color: #fff; }
+            body.login #login .form_login form .login_validate .bg_validate .button_validate:hover {
+              cursor: pointer; }
+
+/* RESET */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+button {
+  border: none;
+  background: transparent; }
+
+input {
+  outline: none;
+  border: none; }
 
