@@ -53,7 +53,7 @@ class Validation
     $data = [];
     foreach ($array as $key => $value) {
       if (is_array($value)){
-        $data[$key] = parent::recursivefilter($value);
+        $data[$key] = Validation::recursivefilter($value);
       }else{
         $data[$key] = filter_var($value, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
       }
@@ -67,7 +67,7 @@ class Validation
   {
     foreach ($data as $key => $value) {
       if (is_array($value)){
-        $data[$key] = recursive($value);
+        $data[$key] = Validation::recursivefilter($value);
       }else{
         $data[$key] = filter_var($value, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
       }
