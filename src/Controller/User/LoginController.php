@@ -19,7 +19,7 @@ class LoginController extends Controller
     // Traitement du formuliare de connexion
     $this->postLogin();
     // Rendue de la vue
-    return $this->view('/defaults/models/login.html.twig', []);
+    return $this->view('/users/login.html.twig', []);
   }
 
   // Traitement du formuliare de connectetion

@@ -119,5 +119,25 @@ class User implements EntityInterface, UserInterface
     return $this;
   }
 
+  // Retorune la liste des roles de l'application
+  public static function getRolesTypes() : array
+  {
+      // Roles has h
+      foreach (array_keys(ROLES) as $key => $role) {
+          if (!is_numeric($role)) {
+              $roles[] = $role;
+          }
+      }
+
+      // simple roel
+      foreach (ROLES as $key => $role) {
+          if (!is_array($role)) {
+              $roles[] = $role;
+          }
+      }
+
+      return $roles;
+  }
+
 
 }

@@ -18,19 +18,19 @@ class RegisterController extends Controller
         $user = new User();
 
         // User register data
-        $user->setLastname('Mr Dev')
-             ->setFirstname('dec')
-             ->setEmail('dev@test.fr')
-             ->setPassword('admin')
-             ->setRoles(['dev']);
+        // $user->setLastname('Mr Dev')
+        //      ->setFirstname('dec')
+        //      ->setEmail('dev@test.fr')
+        //      ->setPassword('admin')
+        //      ->setRoles(['dev']);
 
-        // On vérifie si l'adresse email n'existe pas déjà
-        $users = $this->getTable(User::class)->search(['email' => ['=','']])->getOne();
+        // // On vérifie si l'adresse email n'existe pas déjà
+        // $users = $this->getTable(User::class)->search(['email' => ['=','']])->getOne();
             
-        // Insert user in database 
-        $this->create($user);
+        // // Insert user in database 
+        // $this->create($user);
         
-        //  return $this->view('user/register.html.twig', []);
+         return $this->view('/users/register.html.twig', []);
 
     }
 

@@ -28,7 +28,21 @@ define('DB_PASS', 'root');
 define('DB_PORT', 3306);
 define('DB_CHARSET', 'Utf8');
 
+// ROLES 
+define('ROLES', [
+   'super-admin' => ['sup-admin', 'manager'],
+   'admin'       => ['dev'],
+   'manager', 
+   'dev'         => ['vip', 'firm', 'particular', 'user', 'visitor'],
+   'vip'        =>  ['firm'],
+   'firm',        
+   'particular',
+   'user',
+   'visitor'
+]);
+
 /***************************
    SECURITY CONFIGURATION
 ****************************/
+
 define('DEFAULT_ROOT', '/');
