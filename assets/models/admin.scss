@@ -3,7 +3,7 @@
 body.admin{
 
     position: relative;
-    background-color: $third-color;
+    background-color: $fourth-color;
     $aside-width: 100px;
 
     // > * {border: 1px solid black;}
@@ -30,7 +30,7 @@ body.admin{
         align-items: center;
         justify-content: flex-start;
         flex-direction: column;
-        background-color: $third-color;
+        background-color: $fourth-color;
         overflow-y: auto;
 
         .svg-conatiner{
@@ -43,7 +43,7 @@ body.admin{
             border: 1px solid $default-border-color;
         }
     }
-    
+
     aside:first-child{
         margin-top: 25px;
     }

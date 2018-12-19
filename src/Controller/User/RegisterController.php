@@ -33,9 +33,6 @@ class RegisterController extends Controller
          return $this->view('/users/register.html.twig', []);
 
     }
-
-
-
     
 
 }
