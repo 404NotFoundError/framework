@@ -33,13 +33,11 @@ class LoginController extends Controller
          if ($user && $user->isEqualPassword($_POST['password'])) {
            // Redirection de l'utilisateur
            if (in_array('admin', $user->getRoles())) {
-
-            echo "is admin";
-            // header('Location : ' . $_SERVER['HTTP_HOST'] . '/dash/backoffice');
-            // exit();
-
+            header('Location: /dash/backoffice');
+            exit();
            }else{
-            echo "Vous êtes bien connecter";
+            header('Location: /dash/frontoffice');
+            exit();
            }
          }else{
            $this->setErrors('form',  'Email et (ou) mot de passe incorrect');

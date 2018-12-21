@@ -15,9 +15,15 @@ $route->create(['GET', 'POST'], '/login', 'User\LoginController@login')
       ->middleware([]);
 
 // BackOffice Dashboard
-$route->create(['GET', 'POST'], '/dash/backoffice', 'User\BackOfficeDashboard@dashboard')
-      ->name('login-page')
-      ->description('Gestion des utilisateurs')
+$route->create(['GET'], '/dash/backoffice', 'User\BackOfficeDashboard@dashboard')
+      ->name('')
+      ->description('')
+      ->middleware([]);
+
+// FrontOffice Dashboard
+$route->create(['GET'], '/dash/frontoffice', 'User\FrontOfficeDashBoard@dashboard')
+      ->name('')
+      ->description('')
       ->middleware([]);
 
 // User Manage

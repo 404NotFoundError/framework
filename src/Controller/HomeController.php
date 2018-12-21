@@ -12,8 +12,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-
-        app_debug('Hello, this is a default homePage.');
+        app_debug('This home page go to /login for log');
     }
 
 

@@ -6,12 +6,12 @@ use Tool\Controller;
 use App\Entity\User;
 use App\EntityManager\UserManager;
 
-class BackOfficeDashBoard extends Controller 
+class FrontOfficeDashBoard extends Controller 
 {
 
     public function dashboard()
     {
-        app_debug('<h1> This is admin dashborad </h1>');
+        app_debug('<h1> This is client dashboard </h1>');
     }
     
 }
