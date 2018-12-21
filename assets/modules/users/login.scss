@@ -41,10 +41,23 @@ body.login{
                 text-align: center; 
             }
 
+            div.global-2{ 
+                margin: 2px 0px 2px 0px;
+            }
+
             span.error{
                 width: 75%;
                 height: auto;
                 color: rgb(133, 39, 39);
+                text-align: left;
+                margin-bottom: 10px;
+                letter-spacing: 0.5px;
+            }
+
+            span.success{
+                width: 75%;
+                height: auto;
+                color: rgb(39, 133, 63);
                 text-align: left;
                 margin-bottom: 10px;
                 letter-spacing: 0.5px;
@@ -67,6 +80,12 @@ body.login{
                 font-weight: bold;
                 letter-spacing: 1.2px;
                 box-shadow: none;
+            }
+
+            .password-forgot{
+                width: 75%;
+                margin-top: 12px;
+                text-align: right;
             }
 
 

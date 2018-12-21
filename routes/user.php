@@ -14,6 +14,12 @@ $route->create(['GET', 'POST'], '/login', 'User\LoginController@login')
       ->description('Page de connection de l\'application')
       ->middleware([]);
 
+// Password forgot
+$route->create(['GET', 'POST'], '/user/password/forgot', 'User\PasswordResetController@forgotPassword')
+      ->name('')
+      ->description('Page de connection de l\'application')
+      ->middleware([]);
+
 // BackOffice Dashboard
 $route->create(['GET'], '/dash/backoffice', 'User\BackOfficeDashboard@dashboard')
       ->name('')
