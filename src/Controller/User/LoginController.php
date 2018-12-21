@@ -13,11 +13,14 @@ use Helper\Validator\Validation;
 class LoginController extends Controller
 {
 
+  public function __construct()
+  {
+    $this->postLogin();
+  }
+
   // Log a user 
   public function login()
   {
-    // Traitement du formuliare de connexion
-    $this->postLogin();
     // Rendue de la vue
     return $this->view('/users/login.html.twig', []);
   }
@@ -60,7 +63,6 @@ class LoginController extends Controller
    */
   private function controlPostData()
   {
-
      // Validation des données 
      $validation = new Validation([
        'email'    => [$_POST['email'], 'required|email'],

@@ -2,10 +2,43 @@
 
 {% block title %} Resgiter {% endblock %}
 
-{% block module %}user-register{% endblock %}
+{% block module %}user-update{% endblock %}
 
 {% block content %}
 
-    <h1> hello world </h1>
+    {# Users #}
+    <article class="list">
+        {# Search bar #}
+        <form>
+            <input type="text" name="" placeholder="    Rechercher ..." />
+            <button class="submit"> S </button>
+        </form>
+        {# User List #}
+        <div class="users">
+           {% for user in users %}
+             <div class="user">  
+                <!-- picture -->
+                <div class="pic"> <img src="" /> </div>
+                <!-- data -->
+                <div class="data"> 
+                    <div> {{ user.lastname }} </div> 
+                    <div> {{ user.firstname }} </div> 
+                    <div> {{ user.email }} </div>
+                </div>
+                <!-- button -->
+                <div class="buttons"> 
+                    <button class="update"> U </button>
+                    <button class="delete"> D </button>
+                </div>
+             </div>
+           {% endfor %}
+        </div>
+    </article>
+
+    {# User #}
+    <article class="update">
+
+    </article>
+    
     
 {% endblock %}

@@ -63,7 +63,7 @@ class User implements EntityInterface, UserInterface
     return $this;
   }
 
-  public function getFirstame()
+  public function getFirstname()
   {
     return $this->firstname;
   }

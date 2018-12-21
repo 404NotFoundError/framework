@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block template %}admin{% endblock %}
+
+{% block body %}
+
+    <aside>
+        
+        <!-- profil -->
+        <div class="svg-conatiner"> 
+            <img src="" />
+        </div>
+        <!-- user manage -->
+        <div class="svg-conatiner"> 
+            <img src="" />
+        </div>
+        <!-- project manage -->
+        <div class="svg-conatiner"> 
+            <img src="" />
+        </div>
+        <!-- ask -->
+        <div class="svg-conatiner"> 
+            <img src="" />
+        </div>
+
+    </aside>
+    
+    <section class="{% block module %}{% endblock %}">
+        {% block content %}{% endblock %}
+    </section>
+
+{% endblock %}

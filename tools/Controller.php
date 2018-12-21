@@ -43,9 +43,9 @@ class Controller
   public function setParams(array $params)
   {
     foreach ($params as $key => $param) {
-      $params[$key] = filter_var($param, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+      $this->params[$key] = filter_var($param, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     }
-    return $this->params[] = $params;
+    return $this;
   }
 
   /**

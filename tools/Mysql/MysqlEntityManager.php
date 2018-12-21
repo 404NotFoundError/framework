@@ -110,13 +110,18 @@ trait MysqlEntityManager
      * Lecture de l'ensemble du contenu d'une table
      * @param array, $entity
      */
-    public function getAll()
+    public function getAll(string $responseFormat = null)
     {
        $conn = Mysql::connect();
        $request = $conn->prepare("SELECT * FROM $this->table");
        $request->execute();
 
-       return $request->fetchAll(PDO::FETCH_CLASS, $this->class);
+       if ($responseFormat === "array") {
+        return $request->fetchAll();
+       } else {
+        return $request->fetchAll(PDO::FETCH_CLASS, $this->class);
+       }
+       
     }
 
     /**

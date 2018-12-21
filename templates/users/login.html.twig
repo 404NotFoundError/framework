@@ -6,66 +6,34 @@
 
 {% block body %} 
 
-    <header>
-    
-    </header>
+   <section>
 
-    <section id="login">
+    <form action="" method="POST">
 
-        <div class="form_login">
+        <!-- global error -->
+        <div class="global">
+            <span class="error"> {{ error.form }} </span>
+        </div>
 
-            <form action="/login" method="POST">
+        <!-- email -->
+        <div class="email">
+            <span class="error"> {{ error.input.email }} </span>
+            <input type="email" name="email" placeholder="   Email"/ value="{{ post.email }}">
+        </div>
 
-                <p>Bienvenue</p>
-
-                <span class="span_logo">
-                    <img src="##" alt="Adita"/>
-                </span>
-
-                {# Erreur global pour le formuliare  #}
-                <span> {{ error.form }} </span>
-
-                <div class="login_email">
-
-                    <span class="error_email">{{error.input.email}}</span> 
-                    <input class="input_email"type="text" name="email" value="{{ post.email }}"></input>
-                    <span class="span_email" data-placeholder="Email"></span>
-                    
-                </div>
-
-                <div class="login_password">
-
-                    <span class="error_email">{{error.input.password}}</span>
-                    <input class="input_password" type="password" name="password" value="{{post.password}}"></input>
-                    <span class="span_password" data-placeholder="Mot de passe"></span>
-
-                </div>
-
-                <div class="login_forget">
-
-                    <a href="##">Mot de passe oublié ?</a>
-
-                </div>
-
-                <div class="login_validate">
-
-                    <div class ="bg_validate">
-
-                        <div class="bg_button"></div>
-                        <button class="button_validate" type="submit" name="submit" value="">Connexion</button>
-                    
-                    </div>
-
-                </div>
-
-            </form>
-
+        <!-- password -->
+        <div class="password">
+            <span class="error"> {{ error.input.password }} </span>
+            <input type="password" name="password" placeholder="   Mot de passe"/>
         </div>
         
-    </section>
+        <!-- submit -->
+        <div class="submit">
+            <input type="submit" name="submit" value="CONNEXION"/>
+        </div>
 
-    <footer>
+    </form>
 
-    </footer>
+   </section>
 
 {% endblock %}

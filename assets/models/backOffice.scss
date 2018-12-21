@@ -1,0 +1,47 @@
+@import "./../sass/all";
+
+body.admin{
+
+    position: relative;
+    background-color: $fourth-color;
+    $aside-width: 100px;
+    $default-height: 65px;
+    font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    aside{
+        width: $aside-width;
+        height: 100%;
+        position: absolute;
+        top: $default-height;
+        right: 0%;
+        bottom: $default-height;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        background-color: $fourth-color;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        .svg-conatiner{
+            width: 65px;
+            height: 65px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            background-color: white;
+            border: 1px solid $default-border-color;
+        }
+    }
+
+    section{
+        position: absolute;
+        top: $default-height;
+        left: 0%;
+        right: $aside-width;
+        bottom: $default-height;
+        left: 85px;
+        overflow: auto;
+    }
+
+    
+}

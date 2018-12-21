@@ -14,9 +14,8 @@ $route->create(['GET', 'POST'], '/login', 'User\LoginController@login')
       ->description('Page de connection de l\'application')
       ->middleware([]);
 
-// Registration 
-$route->create(['GET', 'POST'], '/register', 'User\RegisterController@register')
-      ->name('register-page')
-      ->description('Inscription d\'un membre')
+// User Manage
+$route->create(['GET', 'POST'], '/user/manage', 'User\UserController@manage')
+      ->name('login-page')
+      ->description('Gestion des utilisateurs')
       ->middleware([]);
-
