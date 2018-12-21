@@ -13,14 +13,10 @@ use Helper\Validator\Validation;
 class LoginController extends Controller
 {
 
-  public function __construct()
-  {
-    $this->postLogin();
-  }
-
   // Log a user 
   public function login()
   {
+    $this->postLogin();
     // Rendue de la vue
     return $this->view('/users/login.html.twig', []);
   }
@@ -35,13 +31,13 @@ class LoginController extends Controller
          // On vérifie si l'addresse email est valide et que cette dernière correspond à l'email 
          $user = $this->getTable(User::class)->search(['email' => ['=', $_POST['email']]])->getOne();
          if ($user && $user->isEqualPassword($_POST['password'])) {
-           // Génération de token pour l'utilisateur
-           $user->generateToken();
            // Redirection de l'utilisateur
-           if (in_array(['admin'], $user->getRoles())) {
-            echo "c'est un admin";
-           }elseif (in_array(['dev'], $user->getRoles())){
-            echo "c'est un dev";
+           if (in_array('admin', $user->getRoles())) {
+
+            echo "is admin";
+            // header('Location : ' . $_SERVER['HTTP_HOST'] . '/dash/backoffice');
+            // exit();
+
            }else{
             echo "Vous êtes bien connecter";
            }

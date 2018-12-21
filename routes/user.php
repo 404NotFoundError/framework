@@ -14,6 +14,12 @@ $route->create(['GET', 'POST'], '/login', 'User\LoginController@login')
       ->description('Page de connection de l\'application')
       ->middleware([]);
 
+// BackOffice Dashboard
+$route->create(['GET', 'POST'], '/dash/backoffice', 'User\BackOfficeDashboard@dashboard')
+      ->name('login-page')
+      ->description('Gestion des utilisateurs')
+      ->middleware([]);
+
 // User Manage
 $route->create(['GET', 'POST'], '/user/manage', 'User\UserController@manage')
       ->name('login-page')
