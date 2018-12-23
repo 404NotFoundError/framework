@@ -12,9 +12,14 @@ class UserController extends Controller
     public function manage()
     {
 
+        $users = $this->getTable(User::class)->getAll();
+
+        return $this->view('/users/manage.html.twig', [
+            'users' => $users,
+            'roles' => User::getRolesTypes()
+        ]);
 
     }
-
 
 
 

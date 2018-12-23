@@ -2,24 +2,23 @@
 
 /** YOUR APP CONFIGURATION HERE **/
 
-/*******************
- APPLICATION CONFIG
-*******************/
-
+// APPLICATION CONFIG
 define('APP_MODE', 'dev');
-define('APP_NAME', 'framework');
+define('APP_NAME', 'ADIDA');
 define('APP_FOLDER_NAME', 'portfolio');
 define('APP_KEY', '');
 define('APP_HOST', 'http://www.local.adebayo.me:8888');
-define('APP_MAIL', 'hountondjigodwill@gmail.com');
+
+// MAIL CONFIG
+define('APP_MAIL', 'hbb.develop@gmail.com');
 define('APP_SMTP', 'smtp.gmail.com');
-define('APP_SMTP_PORT', 465);
-define('APP_SMTP_PASS', '');
+define('APP_SMTP_AUTH', true);
+define('APP_SMTP_USERNAME', 'hbb.develop@gmail.com');
+define('APP_SMTP_PASSWORD', 'N2cobusy');
+define('APP_SMTP_PORT', 587);
+define('APP_SMTP_PASS', 'N2cobusy');
 
-/********************
-   DATABASE CONFIG
-********************/
-
+// DATABASE CONFIG
 define('DB_DRIVER', 'pdo_mysql');
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'adebayo');
@@ -28,7 +27,7 @@ define('DB_PASS', 'root');
 define('DB_PORT', 3306);
 define('DB_CHARSET', 'Utf8');
 
-// ROLES 
+// ROLES CONFIG
 define('ROLES', [
    'super-admin' => ['sup-admin', 'manager'],
    'admin'       => ['dev'],
@@ -41,8 +40,5 @@ define('ROLES', [
    'visitor'
 ]);
 
-/***************************
-   SECURITY CONFIGURATION
-****************************/
-
+// SECURITY CONFIG
 define('DEFAULT_ROOT', '/');

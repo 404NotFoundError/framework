@@ -30,6 +30,7 @@ class LoginController extends Controller
       if (empty($this->controlPostData())){
          // On vérifie si l'addresse email est valide et que cette dernière correspond à l'email 
          $user = $this->getTable(User::class)->search(['email' => ['=', $_POST['email']]])->getOne();
+
          if ($user && $user->isEqualPassword($_POST['password'])) {
            // Redirection de l'utilisateur
            if (in_array('admin', $user->getRoles())) {
@@ -40,12 +41,12 @@ class LoginController extends Controller
             exit();
            }
          }else{
-           $this->setErrors('form',  'Email et (ou) mot de passe incorrect');
+           $this->setError('form',  'Email et (ou) mot de passe incorrect');
          }
       }
       // SI LES DONNÉES NE SONT PAS VALIDE
       else{
-        $this->setErrors('input', $this->controlPostData());
+        $this->setError('input', $this->controlPostData());
       }
     }
 

@@ -16,7 +16,8 @@ trait UserSecurityBundle
      */
     public function passwordCrypt(string $password)
     {
-        return password_hash($password, PASSWORD_BCRYPT, ['cost' => 12]);
+        return $password;
+        // return password_hash($password, PASSWORD_BCRYPT, ['cost' => 12]);
     }
     
     /**
@@ -27,7 +28,7 @@ trait UserSecurityBundle
      */
     public function isEqualPassword(string $password)
     {
-        if (password_verify($password, $this->password)){
+        if ($this->passwordCrypt($password) === $this->getPassword()){
             return true;
         } else {
             return false;

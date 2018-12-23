@@ -25,17 +25,29 @@ class Controller
    */
   protected $errors = [];
 
+  /**
+   * List of form success message
+   * @var array, $success
+   */
+  protected $success = [];
+
 
   /**
    * Add new errors in error list
    * @var string $key, Error name
    * @var string-array $message, Error description
    */
-  protected function setErrors(string $key, $value)
+  protected function setError(string $key, $value)
   {
     return $this->errors[$key] = $value;
   }
-  
+
+  // renvoie des messeges de suucès
+  protected function setSuccess(string $key, $value)
+  {
+    return $this->success[$key] = $value;
+  }
+
   /**
    * Renvoie une liste de paramètre pour les utilisateurs
    * @var array\Request-parameters
@@ -57,9 +69,12 @@ class Controller
   {
       // On ajoute la liste des erreurs
       $parameters['error'] = $this->errors;
+      // On ajoute la liste des message de succès 
+      $parameters['success'] = $this->success;
       // On ajoute la liste des données POST et GET échapper.
       $parameters['post'] = $_POST;
       $parameters['get']  = $_GET;
+
       // On renvoie le jeton de l'utilisateur pour qu'il puisse être utiliser en dans les formuliares.
       if (isset($_SESSION['token'])) {
         $parameters['user']['token'] = $_SESSION['token'];
