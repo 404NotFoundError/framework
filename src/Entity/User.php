@@ -44,6 +44,11 @@ class User implements EntityInterface, UserInterface
    */
   private $roles;
 
+  /**
+   * @var string
+   */
+  private $password_token;
+
   public function getId()
   {
     return $this->id;
@@ -119,6 +124,17 @@ class User implements EntityInterface, UserInterface
     return $this;
   }
 
+  public function getPasswordToken()
+  {
+    return $this->password_token;
+  }
+
+  public function setPasswordToken(string $token)
+  {
+    $this->password_token = $token;
+    return $this;
+  }
+
   // Retorune la liste des roles de l'application
   public static function getRolesTypes() : array
   {
@@ -138,6 +154,7 @@ class User implements EntityInterface, UserInterface
 
       return $roles;
   }
+
 
 
 }

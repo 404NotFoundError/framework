@@ -17,6 +17,7 @@
       "deploy" : "Tool\\Deploy\\DeployApp::deploy"
     },
     "require": {
-        "twig/twig": "^2.5"
+        "twig/twig": "^2.5",
+        "phpmailer/phpmailer": "^6.0"
     }
 }

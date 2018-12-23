@@ -45,80 +45,333 @@ html {
 html, body {
   width: 100%;
   height: 100%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }
+
+body {
   overflow-x: hidden;
   overflow-y: auto; }
+  body a {
+    text-decoration: none;
+    color: black; }
 
 /**** THEME - COLORS ****/
 /**** BUTTONS COLORS *****/
 /**** BACKGROUND COLORS ****/
 /**** FONT ****/
+body.backOffice {
+  background-color: #F6F7F8;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  body.backOffice section {
+    width: calc(100% - 100px);
+    height: calc(100% - 100px);
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; }
+    body.backOffice section aside {
+      width: 100px;
+      height: 90%;
+      display: flex;
+      align-items: center;
+      flex-direction: column; }
+      body.backOffice section aside div {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #2CAF90;
+        border-radius: 10px;
+        box-shadow: 0px 0px 2px #D8DEE2;
+        background-color: #FFFFFF; }
+    body.backOffice section article {
+      width: 100%;
+      height: 90%;
+      margin-left: 1px; }
+
+/**** THEME - COLORS ****/
+/**** BUTTONS COLORS *****/
+/**** BACKGROUND COLORS ****/
+/**** FONT ****/
+body.login section form {
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  max-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0px 0px 4px #D8DEE2;
+  background-color: #FFFFFF;
+  border-radius: 10px; }
+  body.login section form div {
+    width: 100%;
+    height: auto;
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+  body.login section form div.title {
+    color: #788089;
+    font-size: 220%;
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 0px 0px 20px 0px; }
+  body.login section form div.global {
+    display: block;
+    margin: 2px 0px 2px 0px;
+    text-align: center; }
+  body.login section form div.global-2 {
+    margin: 20px 0px 0px 0px; }
+  body.login section form span.error {
+    width: 75%;
+    height: auto;
+    color: #852727;
+    text-align: left;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px; }
+  body.login section form span.success {
+    width: 75%;
+    height: auto;
+    color: #27853f;
+    text-align: left;
+    line-height: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px; }
+  body.login section form input {
+    width: 75%;
+    height: 40px;
+    font-size: 100%;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px #D8DEE2; }
+  body.login section form input[type=submit] {
+    background-color: #2CAF90;
+    color: white;
+    font-size: 115%;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    box-shadow: none; }
+  body.login section form .password-forgot {
+    width: 75%;
+    margin-top: 12px;
+    text-align: right;
+    color: #788089; }
+
 body.login {
   width: 100%;
   height: 100%;
-  background-color: #F6F7F8;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+  background-color: #F6F7F8; }
   body.login section {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center; }
-    body.login section form {
-      width: 500px;
-      height: 500px;
+
+/**** THEME - COLORS ****/
+/**** BUTTONS COLORS *****/
+/**** BACKGROUND COLORS ****/
+/**** FONT ****/
+body.paswwordForgot section form {
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  max-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0px 0px 4px #D8DEE2;
+  background-color: #FFFFFF;
+  border-radius: 10px; }
+  body.paswwordForgot section form div {
+    width: 100%;
+    height: auto;
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+  body.paswwordForgot section form div.title {
+    color: #788089;
+    font-size: 220%;
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 0px 0px 20px 0px; }
+  body.paswwordForgot section form div.global {
+    display: block;
+    margin: 2px 0px 2px 0px;
+    text-align: center; }
+  body.paswwordForgot section form div.global-2 {
+    margin: 20px 0px 0px 0px; }
+  body.paswwordForgot section form span.error {
+    width: 75%;
+    height: auto;
+    color: #852727;
+    text-align: left;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px; }
+  body.paswwordForgot section form span.success {
+    width: 75%;
+    height: auto;
+    color: #27853f;
+    text-align: left;
+    line-height: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px; }
+  body.paswwordForgot section form input {
+    width: 75%;
+    height: 40px;
+    font-size: 100%;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px #D8DEE2; }
+  body.paswwordForgot section form input[type=submit] {
+    background-color: #2CAF90;
+    color: white;
+    font-size: 115%;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    box-shadow: none; }
+  body.paswwordForgot section form .password-forgot {
+    width: 75%;
+    margin-top: 12px;
+    text-align: right;
+    color: #788089; }
+
+body.paswwordForgot {
+  width: 100%;
+  height: 100%;
+  background-color: #F6F7F8; }
+  body.paswwordForgot section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    body.paswwordForgot section form {
+      max-height: 400px; }
+      body.paswwordForgot section form div.title {
+        font-size: 160%; }
+
+/**** THEME - COLORS ****/
+/**** BUTTONS COLORS *****/
+/**** BACKGROUND COLORS ****/
+/**** FONT ****/
+article.user-manage {
+  border-radius: 10px;
+  box-shadow: 0px 0px 2px #D8DEE2;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  article.user-manage div.list {
+    width: 350px;
+    height: 100%;
+    border-right: 1px solid #D8DEE2;
+    overflow-x: hidden;
+    overflow: auto; }
+    article.user-manage div.list form {
+      width: 100%;
+      height: 50px;
+      border-bottom: 1px solid #D8DEE2;
+      position: relative;
+      border-top-left-radius: 10px; }
+      article.user-manage div.list form input {
+        width: 90%;
+        height: 90%;
+        border: none;
+        border-top-left-radius: 10px; }
+      article.user-manage div.list form button {
+        position: absolute;
+        top: 0%;
+        right: 10px;
+        bottom: 0%; }
+    article.user-manage div.list div.user {
+      width: 100%;
+      height: 90px;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      box-shadow: 0px 0px 2px gray;
-      background-color: #FFFFFF;
-      border-radius: 10px; }
-      body.login section form div {
-        width: 100%;
-        height: auto;
-        margin: 20px 0px 20px 0px;
+      border-bottom: 1px solid #D8DEE2; }
+      article.user-manage div.list div.user div.pic {
+        width: 90px;
+        height: 90px;
         display: flex;
         align-items: center;
+        justify-content: center; }
+        article.user-manage div.list div.user div.pic img {
+          width: 75%;
+          height: 75%;
+          border-radius: 100%;
+          box-shadow: 0px 0px 2px #D8DEE2; }
+      article.user-manage div.list div.user div.data {
+        width: calc(100% - 90px);
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
         justify-content: center;
         flex-direction: column; }
-      body.login section form div.global {
-        display: block;
-        margin: 2px 0px 2px 0px;
-        text-align: center; }
-      body.login section form div.global-2 {
-        margin: 2px 0px 2px 0px; }
-      body.login section form span.error {
-        width: 75%;
-        height: auto;
-        color: #852727;
-        text-align: left;
-        margin-bottom: 10px;
-        letter-spacing: 0.5px; }
-      body.login section form span.success {
-        width: 75%;
-        height: auto;
-        color: #27853f;
-        text-align: left;
-        margin-bottom: 10px;
-        letter-spacing: 0.5px; }
-      body.login section form input {
-        width: 75%;
-        height: 40px;
-        font-size: 100%;
-        letter-spacing: 1px;
-        border: none;
-        border-radius: 10px;
-        box-shadow: 0px 0px 2px gray; }
-      body.login section form input[type=submit] {
-        background-color: #2CAF90;
-        color: white;
-        font-size: 115%;
-        font-weight: bold;
-        letter-spacing: 1.2px;
-        box-shadow: none; }
-      body.login section form .password-forgot {
-        width: 75%;
-        margin-top: 12px;
-        text-align: right; }
-
+        article.user-manage div.list div.user div.data div {
+          margin-left: 10px; }
+  article.user-manage div.update {
+    width: calc(100% - 350px);
+    height: 100%;
+    overflow-x: hidden;
+    overflow: auto; }
+    article.user-manage div.update div.user {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      article.user-manage div.update div.user > div {
+        height: calc(100% - 50px); }
+      article.user-manage div.update div.user div.infos {
+        width: calc(100% - 400px);
+        display: flex;
+        align-items: center;
+        flex-direction: column; }
+        article.user-manage div.update div.user div.infos form {
+          width: 100%;
+          height: 100%; }
+          article.user-manage div.update div.user div.infos form div.inputs, article.user-manage div.update div.user div.infos form div.buttons {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column; }
+          article.user-manage div.update div.user div.infos form div.inputs {
+            height: calc(100% - 235px); }
+          article.user-manage div.update div.user div.infos form input {
+            width: 75%;
+            height: 50px;
+            font-size: 75%;
+            border: none;
+            border-bottom: 1px solid #D8DEE2; }
+          article.user-manage div.update div.user div.infos form button {
+            width: 75%;
+            height: 40px;
+            margin: 20px 0px 0px 0px;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-size: 90%; }
+          article.user-manage div.update div.user div.infos form button.update {
+            margin-top: 50px;
+            background-color: #2CAF90; }
+          article.user-manage div.update div.user div.infos form button.delete {
+            background-color: #b92424; }
+      article.user-manage div.update div.user div.roles {
+        width: 200px; }
+      article.user-manage div.update div.user div.projects {
+        width: 200px; }
 

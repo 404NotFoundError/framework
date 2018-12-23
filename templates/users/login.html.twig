@@ -10,6 +10,11 @@
 
     <form action="" method="POST">
 
+        <!-- form title -->
+        <div class="title">
+            <span class=""> Identification </span>
+        </div>
+
         <!-- global error -->
         <div class="global">
             <span class="error"> {{ error.form }} </span>
@@ -18,14 +23,14 @@
         <!-- email -->
         <div class="email">
             <span class="error"> {{ error.input.email }} </span>
-            <input type="email" name="email" placeholder="   Email"/ value="{{ post.email }}">
+            <input type="text" name="email" placeholder="   Email"/ value="{{ post.email }}">
         </div>
 
         <!-- password -->
         <div class="password">
             <span class="error"> {{ error.input.password }} </span>
             <input type="password" name="password" placeholder="   Mot de passe"/>
-            <a href="/user/password/forgot" class="password-forgot"> Mot de passe oublié </a>
+            <a href="/user/password/forgot?email={{ post.email }}" class="password-forgot"> Mot de passe oublié ? </a>
         </div>
 
         <!-- submit -->

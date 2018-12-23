@@ -5,31 +5,37 @@
 // Default Home
 $route->create(['GET'], '/', 'HomeController@index')
       ->name('home-page')
-      ->description('Page d\'acceuil de site pour visiteur')
+      ->description('Acceuil')
       ->middleware([]);
 
 // Login
 $route->create(['GET', 'POST'], '/login', 'User\LoginController@login')
       ->name('login-page')
-      ->description('Page de connection de l\'application')
+      ->description('Connexion')
       ->middleware([]);
 
-// Password forgot
+// Password forgot 
 $route->create(['GET', 'POST'], '/user/password/forgot', 'User\PasswordResetController@forgotPassword')
       ->name('')
-      ->description('Page de connection de l\'application')
+      ->description('Génération de token pour mot de passe oublier')
+      ->middleware([]);
+
+// Password Update with token
+$route->create(['GET', 'POST'], '/user/password/update/{email}/{token}', 'User\PasswordResetController@generatePassword')
+      ->name('')
+      ->description('Mise à jour mot de passe oublié')
       ->middleware([]);
 
 // BackOffice Dashboard
 $route->create(['GET'], '/dash/backoffice', 'User\BackOfficeDashboard@dashboard')
       ->name('')
-      ->description('')
+      ->description(' Acceuil backoffice')
       ->middleware([]);
 
 // FrontOffice Dashboard
 $route->create(['GET'], '/dash/frontoffice', 'User\FrontOfficeDashBoard@dashboard')
       ->name('')
-      ->description('')
+      ->description('acceuil frontoffice')
       ->middleware([]);
 
 // User Manage

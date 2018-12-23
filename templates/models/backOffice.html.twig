@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block template %}backOffice{% endblock %}
+
+{% block body %}
+
+   <section>
+        <!-- Content -->
+        <article class="{% block module %}{% endblock %}">
+            {% block content %}{% endblock %}
+        </article>
+        <!-- Nav bar -->
+        <aside>
+            <!-- Dashboard -->
+            <div> <a href=""> D </a> </div>
+            <!-- Profil -->
+            <div> <a href=""> P </a> </div>
+            <!-- Manage -->
+            <div> <a href=""> M </a> </div>
+            <!-- Messages -->
+            <div> <a href=""> M </a> </div>
+            <!-- Projets -->
+            <div> <a href=""> P </a> </div>
+        </aside>
+
+   </section>
+
+
+
+{% endblock %}

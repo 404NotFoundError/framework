@@ -20,9 +20,10 @@ class RouteLoader
        /* On va vérifier s'il des paramètres dans la route et le reformater à l'aide de l'url couante si c'est le cas */
        $data = $this->formatRequestIfParamsExist($route['path']);
        /* Si on trouve une route on charge le controlleur et sort de la boucle */
-       if (isset($_SERVER['PATH_INFO']) && $_SERVER['PATH_INFO'] === $data['route'] || $_SERVER['REQUEST_URI'] === $data['route']) {
+       $pathInfo = explode('?', $_SERVER['REQUEST_URI']);
+       // Si on a une route valide
+       if ($pathInfo[0] === $data['route']) {
          /* On vérifie si le client est connecter à la bonne méthode */
-        //  $this->getMethod($route);
          define('APP_ROUTE', $route);
          /* On regarde si la route à de smiddlewares, si oui on les gère */
          if (isset($route['middlewares'])) $this->loadMiddlewares($route['middlewares']);

@@ -1,0 +1,73 @@
+{% extends '/models/backOffice.html.twig' %}
+
+{% block title %} Management {% endblock %}
+
+{% block module %}user-manage{% endblock %}
+
+{% block content %}
+
+    <!-- Users -->
+    <div class="list">
+        <!-- search -->
+        <form>
+            <input type="text" name="search" placeholder="  Rechercher ..."/>
+            <button> S </button>
+        </form>
+        <!-- user list -->
+        <div class="users-list">
+            {% for user in users %}
+                <!-- user -->
+                <div class="user">
+                    <!-- picture -->
+                    <div class="pic"> <img src="" /> </div>
+                    <!-- data -->
+                    <div class="data"> 
+                        <div> {{ user.lastname }} </div>
+                        <div> {{ user.firstname }} </div>
+                        <div> {{ user.email }} </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Update -->
+    <div class="update">
+        <!-- users -->
+        {% for user in users %}
+            <!-- user -->
+            <div class="user">
+
+              <div class="infos">
+                <form>
+                    <div class="inputs">
+                        <input type="text" name="" placeholder="Nom" value="{{ user.lastname }}" /> 
+                        <input type="text" name="" placeholder="Prénom" value="{{ user.firstname }}" /> 
+                        <input type="text" name="" placeholder="Email" value="{{ user.email }}" /> 
+                        <input type="text" name="" placeholder="Téléphone" value="{{ user.phone }}" /> 
+                        <input type="text" name="" placeholder="Adresse" value="{{ user.address }}" /> 
+                        <input type="text" name="" placeholder="Code Postal" value="{{ user.cp }}" /> 
+                    </div>
+
+                    <div class="buttons">
+                        <button class="update"> METTRE À JOUR </button>
+                        <button class="delete"> SUPPRIMER </button>
+                    </div>
+                </form>
+              </div> 
+
+              <div class="roles">
+                div 2
+              </div> 
+
+              <div class="projects">
+                div 3
+              </div> 
+
+            </div>
+        {% endfor %}
+        
+
+    </div>
+
+{% endblock %}
