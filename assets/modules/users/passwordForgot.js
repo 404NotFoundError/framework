@@ -10,6 +10,4 @@ passwordForgot.script = () => {
     
 }
 
-
-
 export default passwordForgot;

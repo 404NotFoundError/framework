@@ -128,7 +128,7 @@ trait MysqlEntityManager
      * Lecture de plusieur ligne de table
      * @return array\Entity-List
      */
-    public function get()
+    public function get(string $responseFormat = null)
     {
       // Connexion à la base de donnée
       $conn = Mysql::connect();
@@ -139,7 +139,11 @@ trait MysqlEntityManager
       // Exécution de la requete
       $request->execute();
       // On retourne un tableau contenant en objet la liste de réponse
-      return $request->fetchAll(PDO::FETCH_CLASS, $this->class);
+      if ($responseFormat === "array") {
+        return $request->fetchAll();
+       } else {
+        return $request->fetchAll(PDO::FETCH_CLASS, $this->class);
+       }
 
     }
 
