@@ -9,9 +9,9 @@
     <!-- Users -->
     <div class="list">
         <!-- search -->
-        <form>
+        <form name="search-form">
             <input type="text" name="search" placeholder="  Rechercher ..."/>
-            <button> S </button>
+            <button type="button" name="submit"> S </button>
         </form>
         <!-- user list -->
         <div class="users-list">
@@ -39,14 +39,14 @@
             <div class="user">
 
               <div class="infos">
-                <form>
+                <form name="">
                     <div class="inputs">
-                        <input type="text" name="" placeholder="Nom" value="{{ user.lastname }}" /> 
-                        <input type="text" name="" placeholder="Prénom" value="{{ user.firstname }}" /> 
-                        <input type="text" name="" placeholder="Email" value="{{ user.email }}" /> 
-                        <input type="text" name="" placeholder="Téléphone" value="{{ user.phone }}" /> 
-                        <input type="text" name="" placeholder="Adresse" value="{{ user.address }}" /> 
-                        <input type="text" name="" placeholder="Code Postal" value="{{ user.cp }}" /> 
+                        <input type="text" name="lastname" placeholder="Nom" value="{{ user.lastname }}" /> 
+                        <input type="text" name="firstname" placeholder="Prénom" value="{{ user.firstname }}" /> 
+                        <input type="text" name="email" placeholder="Email" value="{{ user.email }}" /> 
+                        <input type="text" name="phone" placeholder="Téléphone" value="{{ user.phone }}" /> 
+                        <input type="text" name="adress" placeholder="Adresse" value="{{ user.address }}" /> 
+                        <input type="text" name="cp" placeholder="Code Postal" value="{{ user.cp }}" /> 
                     </div>
 
                     <div class="buttons">

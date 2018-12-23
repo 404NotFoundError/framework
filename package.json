@@ -10,17 +10,26 @@
   "author": "HOUNTONDJI Adebayo",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.1.5",
-    "@babel/preset-env": "^7.1.5",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.2.3",
     "babel-loader": "^8.0.4",
     "css-loader": "^1.0.1",
     "mini-css-extract-plugin": "^0.4.4",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
+<<<<<<< HEAD
     "webpack": "^4.28.1",
+=======
+    "webpack": "^4.28.2",
+>>>>>>> 2fc8af56617508c17f3ba22257cba24188f2dff5
     "webpack-cli": "^3.1.2"
   },
   "dependencies": {
+    "@babel/runtime": "^7.2.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill-loader": "^1.0.1",
     "vue-loader": "^15.4.2",
     "vue-style-loader": "^4.1.2"
   }
