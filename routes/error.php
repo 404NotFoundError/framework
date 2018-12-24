@@ -15,7 +15,7 @@ $route->create(['GET'], '/error/404', 'ErrorController@error404')
       ->middleware([]);
 
 // 500 Error
-$route->create(['GET'], '/error/500', 'ErrorController@error404')
+$route->create(['GET'], '/error/500', 'ErrorController@error500')
       ->name('500-page')
       ->description('Page introuvable')
       ->middleware([]);
