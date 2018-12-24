@@ -19,11 +19,7 @@
     "mini-css-extract-plugin": "^0.4.4",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
-<<<<<<< HEAD
-    "webpack": "^4.28.1",
-=======
     "webpack": "^4.28.2",
->>>>>>> 2fc8af56617508c17f3ba22257cba24188f2dff5
     "webpack-cli": "^3.1.2"
   },
   "dependencies": {

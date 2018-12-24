@@ -1,6 +1,6 @@
 @import './../../sass/all';
 
-body.error-404 {
+body.error-500 {
     #notfound {
         position: relative;
         height: 100vh;
@@ -17,7 +17,7 @@ body.error-404 {
             text-align: center;
             padding-left: 15px;
             padding-right: 15px;
-            .notfound-404 {
+            .notfound-500 {
                 position: absolute;
                 height: 100px;
                 top: 0;

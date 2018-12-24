@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -164,7 +163,40 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./asse
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_users_login_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/users/login.scss */ \"./assets/modules/users/login.scss\");\n/* harmony import */ var _modules_users_login_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_users_login_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _modules_users_login__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/users/login */ \"./assets/modules/users/login.js\");\n/* harmony import */ var _modules_users_login__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_users_login__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _modules_users_passwordForgot_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/users/passwordForgot.scss */ \"./assets/modules/users/passwordForgot.scss\");\n/* harmony import */ var _modules_users_passwordForgot_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_users_passwordForgot_scss__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _modules_users_passwordForgot__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/users/passwordForgot */ \"./assets/modules/users/passwordForgot.js\");\n/* harmony import */ var _modules_users_manage_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/users/manage.scss */ \"./assets/modules/users/manage.scss\");\n/* harmony import */ var _modules_users_manage_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_users_manage_scss__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _modules_users_manage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/users/manage */ \"./assets/modules/users/manage.js\");\n/**** Login ****/\n\n\n/**** Password forgot ****/\n\n\n\n/**** Manage  ****/\n\n\n\n_modules_users_manage__WEBPACK_IMPORTED_MODULE_5__[\"default\"].loader();\n\n//# sourceURL=webpack:///./assets/module.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_users_login_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/users/login.scss */ \"./assets/modules/users/login.scss\");\n/* harmony import */ var _modules_users_login_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_users_login_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _modules_users_login__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/users/login */ \"./assets/modules/users/login.js\");\n/* harmony import */ var _modules_users_login__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_users_login__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _modules_errors_401_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/errors/401.scss */ \"./assets/modules/errors/401.scss\");\n/* harmony import */ var _modules_errors_401_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_errors_401_scss__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _modules_errors_404_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/errors/404.scss */ \"./assets/modules/errors/404.scss\");\n/* harmony import */ var _modules_errors_404_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_errors_404_scss__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _modules_errors_500_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/errors/500.scss */ \"./assets/modules/errors/500.scss\");\n/* harmony import */ var _modules_errors_500_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_errors_500_scss__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _modules_users_passwordForgot_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/users/passwordForgot.scss */ \"./assets/modules/users/passwordForgot.scss\");\n/* harmony import */ var _modules_users_passwordForgot_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_users_passwordForgot_scss__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _modules_users_passwordForgot__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/users/passwordForgot */ \"./assets/modules/users/passwordForgot.js\");\n/* harmony import */ var _modules_users_manage_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/users/manage.scss */ \"./assets/modules/users/manage.scss\");\n/* harmony import */ var _modules_users_manage_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_users_manage_scss__WEBPACK_IMPORTED_MODULE_7__);\n/* harmony import */ var _modules_users_manage__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/users/manage */ \"./assets/modules/users/manage.js\");\n/**** Login ****/\n\n\n/**** Errors ****/\n\n\n\n\n/**** Password forgot ****/\n\n\n\n/**** Manage  ****/\n\n\n\n_modules_users_manage__WEBPACK_IMPORTED_MODULE_8__[\"default\"].loader();\n\n//# sourceURL=webpack:///./assets/module.js?");
+
+/***/ }),
+
+/***/ "./assets/modules/errors/401.scss":
+/*!****************************************!*\
+  !*** ./assets/modules/errors/401.scss ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./assets/modules/errors/401.scss?");
+
+/***/ }),
+
+/***/ "./assets/modules/errors/404.scss":
+/*!****************************************!*\
+  !*** ./assets/modules/errors/404.scss ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./assets/modules/errors/404.scss?");
+
+/***/ }),
+
+/***/ "./assets/modules/errors/500.scss":
+/*!****************************************!*\
+  !*** ./assets/modules/errors/500.scss ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./assets/modules/errors/500.scss?");
 
 /***/ }),
 
@@ -198,7 +230,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./asse
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _helpers_ScriptLoader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../helpers/ScriptLoader */ \"./assets/helpers/ScriptLoader.js\");\n\nvar manage = _helpers_ScriptLoader__WEBPACK_IMPORTED_MODULE_0__[\"default\"];\nmanage.element = \".backOffice .user-manage\";\n\nmanage.script = function () {\n  console.log('hello my friend');\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (manage);\n\n//# sourceURL=webpack:///./assets/modules/users/manage.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _helpers_ScriptLoader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../helpers/ScriptLoader */ \"./assets/helpers/ScriptLoader.js\");\n\nvar manage = _helpers_ScriptLoader__WEBPACK_IMPORTED_MODULE_0__[\"default\"]; // Barre de recherche\n\nvar searchInput = document.forms['search-form']['search']; // Contenzur d'utilisateur \n\nvar list = document.querySelector('.users-list');\nmanage.element = \".backOffice .user-manage\";\n\nmanage.script = function () {\n  // Lorque l'utilisateur est sur la basere de recher\n  searchInput.addEventListener('keyup', function () {\n    var usersElement = document.querySelectorAll('.users-list > div');\n\n    for (var i = 0; i < usersElement.length; i++) {\n      list.removeChild(usersElement[i]);\n    }\n\n    searchUsers(searchInput.value);\n  });\n}; // Réccupération de la liste des utilisateurs\n\n\nvar searchUsers = function searchUsers(username) {\n  fetch(manage.loaction + '/user/search/' + username).then(function (response) {\n    return response.json();\n  }).then(function (users) {\n    for (var i = 0; i < users.length; i++) {\n      var user = users[i]; // user \n\n      var userDiv = document.createElement('div');\n      userDiv.className = \"user\";\n      list.appendChild(userDiv); // picture\n\n      var picture = document.createElement('div');\n      picture.className = \"pic\";\n      userDiv.appendChild(picture); // img\n\n      var img = document.createElement('img');\n      picture.appendChild(img); // data \n\n      var data = document.createElement('div');\n      data.className = \"data\";\n      userDiv.appendChild(data); // lastname \n\n      var lastname = document.createElement('div');\n      lastname.className = \"lastname\";\n      lastname.innerHTML = user.lastname;\n      data.appendChild(lastname); // firstname \n\n      var firstname = document.createElement('div');\n      firstname.className = \"firstname\";\n      firstname.innerHTML = user.firstname;\n      data.appendChild(firstname); // email \n\n      var email = document.createElement('div');\n      email.className = \"email\";\n      email.innerHTML = user.email;\n      data.appendChild(email);\n    }\n  });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (manage);\n\n//# sourceURL=webpack:///./assets/modules/users/manage.js?");
 
 /***/ }),
 
@@ -237,6 +269,3 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./asse
 /***/ })
 
 /******/ });
-=======
-!function(e){var n={};function t(r){if(n[r])return n[r].exports;var o=n[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,t),o.l=!0,o.exports}t.m=e,t.c=n,t.d=function(e,n,r){t.o(e,n)||Object.defineProperty(e,n,{enumerable:!0,get:r})},t.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},t.t=function(e,n){if(1&n&&(e=t(e)),8&n)return e;if(4&n&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(t.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&n&&"string"!=typeof e)for(var o in e)t.d(r,o,function(n){return e[n]}.bind(null,o));return r},t.n=function(e){var n=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(n,"a",n),n},t.o=function(e,n){return Object.prototype.hasOwnProperty.call(e,n)},t.p="",t(t.s=7)}([function(e,n,t){},function(e,n,t){},function(e,n,t){},function(e,n,t){},function(e,n){},function(e,n,t){},function(e,n,t){},function(e,n,t){"use strict";t.r(n);t(0),t(1),t(2),t(3),t(4),t(5);var r={loaction:window.location.protocol+"//"+window.location.host,element:null,var:{},loader:function(){null!==document.querySelector(r.element)&&r.script()},script:function(){}},o=r,a=o;a.element=".paswwordForgot",a.script=function(){console.log("This page to manage password forgot")};t(6);var c=o,i=document.forms["search-form"].search,l=document.querySelector(".users-list");c.element=".backOffice .user-manage",c.script=function(){i.addEventListener("keyup",function(){for(var e=document.querySelectorAll(".users-list > div"),n=0;n<e.length;n++)l.removeChild(e[n]);u(i.value)})};var u=function(e){fetch(c.loaction+"/user/search/"+e).then(function(e){return e.json()}).then(function(e){for(var n=0;n<e.length;n++){var t=e[n],r=document.createElement("div");r.className="user",l.appendChild(r);var o=document.createElement("div");o.className="pic",r.appendChild(o);var a=document.createElement("img");o.appendChild(a);var c=document.createElement("div");c.className="data",r.appendChild(c);var i=document.createElement("div");i.className="lastname",i.innerHTML=t.lastname,c.appendChild(i);var u=document.createElement("div");u.className="firstname",u.innerHTML=t.firstname,c.appendChild(u);var d=document.createElement("div");d.className="email",d.innerHTML=t.email,c.appendChild(d)}})};c.loader()}]);
->>>>>>> 2fc8af56617508c17f3ba22257cba24188f2dff5
