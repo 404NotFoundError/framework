@@ -65,6 +65,10 @@
         border: none;
         border-radius: 10px;
         box-shadow: 0px 0px 4px #D8DEE2;
+        padding:0 13px;
+        &:focus{
+            box-shadow: 0px 0px 4px $first-color;
+        }
     }
 
     input[type=submit]{
@@ -74,6 +78,8 @@
         font-weight: bold;
         letter-spacing: 1.2px;
         box-shadow: none;
+        width: 80%;
+        cursor: pointer;
     }
 
     .password-forgot{

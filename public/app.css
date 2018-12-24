@@ -152,14 +152,19 @@ body.login section form {
     letter-spacing: 1px;
     border: none;
     border-radius: 10px;
-    box-shadow: 0px 0px 4px #D8DEE2; }
+    box-shadow: 0px 0px 4px #D8DEE2;
+    padding: 0 13px; }
+    body.login section form input:focus {
+      box-shadow: 0px 0px 4px #2CAF90; }
   body.login section form input[type=submit] {
     background-color: #2CAF90;
     color: white;
     font-size: 115%;
     font-weight: bold;
     letter-spacing: 1.2px;
-    box-shadow: none; }
+    box-shadow: none;
+    width: 80%;
+    cursor: pointer; }
   body.login section form .password-forgot {
     width: 75%;
     margin-top: 12px;
@@ -448,14 +453,19 @@ body.paswwordForgot section form {
     letter-spacing: 1px;
     border: none;
     border-radius: 10px;
-    box-shadow: 0px 0px 4px #D8DEE2; }
+    box-shadow: 0px 0px 4px #D8DEE2;
+    padding: 0 13px; }
+    body.paswwordForgot section form input:focus {
+      box-shadow: 0px 0px 4px #2CAF90; }
   body.paswwordForgot section form input[type=submit] {
     background-color: #2CAF90;
     color: white;
     font-size: 115%;
     font-weight: bold;
     letter-spacing: 1.2px;
-    box-shadow: none; }
+    box-shadow: none;
+    width: 80%;
+    cursor: pointer; }
   body.paswwordForgot section form .password-forgot {
     width: 75%;
     margin-top: 12px;
