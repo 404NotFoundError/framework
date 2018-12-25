@@ -37,6 +37,11 @@ class User implements EntityInterface, UserInterface
   /**
    * @var string
    */
+  private $phone;
+
+  /**
+   * @var string
+   */
   private $password;
 
   /**
@@ -48,6 +53,26 @@ class User implements EntityInterface, UserInterface
    * @var string
    */
   private $password_token;
+
+  /**
+   * @var string
+   */
+  private $address;
+
+  /**
+   * @var int
+   */
+  private $cp;
+
+  /**
+   * @var string
+   */
+  private $city;
+
+  /**
+   * @var string
+   */
+  private $country;
 
   public function getId()
   {
@@ -96,6 +121,17 @@ class User implements EntityInterface, UserInterface
     return $this;
   }
 
+  public function getPhone()
+  {
+    return $this->phone;
+  }
+
+  public function setPhone(string $phone)
+  {
+    $this->phone = $phone;
+    return $this;
+  }
+
   public function getPassword()
   {
     return $this->password;
@@ -132,6 +168,49 @@ class User implements EntityInterface, UserInterface
   public function setPasswordToken(string $token)
   {
     $this->password_token = $token;
+    return $this;
+  }
+
+  public function getAddress()
+  {
+    return $this->address;
+  }
+
+  public function setAdress(strint $address)
+  {
+    $this->address = $address;
+    return $this;
+  }
+
+  public function getCodePostal()
+  {
+    return $this->cp;
+  }
+
+  public function setCodePostal(int $cp)
+  {
+    $this->cp = $cp;
+    return $this;
+  }
+  
+  public function getCity()
+  {
+    return $this->city;
+  }
+
+  public function setCity(string $city)
+  {
+    return $this->city;
+  }
+
+  public function getCountry()
+  {
+     return $this->country;
+  }
+
+  public function setCountry(string $country)
+  {
+    $this->country = $country;
     return $this;
   }
 

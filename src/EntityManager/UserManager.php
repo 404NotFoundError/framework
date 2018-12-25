@@ -23,12 +23,16 @@ class UserManager
             $user['lastname']  =  $value->getLastname();
             $user['firstname'] =  $value->getFirstname();
             $user['email']     =  $value->getEmail();
+            $user['phone']     =  $value->getPhone();
             $user['roles']     =  $value->getRoles();
+            $user['cp']        =  $value->getCodePostal();
+            $user['address']   =  $value->getAddress();
+            $user['city']      =  $value->getCity();
+            $user['country']   =  $value->getCountry();
             array_push($userList, $user);
         }
         return $userList;
     }
-
 
     /**
      * Réccupère la liste des projets d'un utilisateur

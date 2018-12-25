@@ -274,13 +274,15 @@ article.user-manage {
   background-color: #FFFFFF;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  color: #788089;
+  overflow: hidden; }
   article.user-manage div.list {
     width: 350px;
     height: 100%;
     border-right: 1px solid #D8DEE2;
     overflow-x: hidden;
-    overflow: auto; }
+    overflow: hidden; }
     article.user-manage div.list form {
       width: 100%;
       height: 50px;
@@ -297,11 +299,16 @@ article.user-manage {
         top: 0%;
         right: 10px;
         bottom: 0%; }
+    article.user-manage div.list div.users-list {
+      width: 100%;
+      height: calc(100% - 50px);
+      overflow: auto; }
     article.user-manage div.list div.user {
       width: 100%;
       height: 90px;
       display: flex;
-      border-bottom: 1px solid #D8DEE2; }
+      border-bottom: 1px solid #D8DEE2;
+      position: relative; }
       article.user-manage div.list div.user div.pic {
         width: 90px;
         height: 90px;
@@ -325,14 +332,14 @@ article.user-manage {
   article.user-manage div.update {
     width: calc(100% - 350px);
     height: 100%;
-    overflow-x: hidden;
-    overflow: auto; }
+    overflow: hidden; }
     article.user-manage div.update div.user {
       width: 100%;
       height: 100%;
       display: flex;
       align-items: center;
-      justify-content: center; }
+      justify-content: center;
+      position: relative; }
       article.user-manage div.update div.user > div {
         height: calc(100% - 50px); }
       article.user-manage div.update div.user div.infos {
@@ -340,23 +347,25 @@ article.user-manage {
         display: flex;
         align-items: center;
         flex-direction: column; }
-        article.user-manage div.update div.user div.infos form {
+        article.user-manage div.update div.user div.infos div.info-inputs {
           width: 100%;
           height: 100%; }
-          article.user-manage div.update div.user div.infos form div.inputs, article.user-manage div.update div.user div.infos form div.buttons {
+          article.user-manage div.update div.user div.infos div.info-inputs div.inputs, article.user-manage div.update div.user div.infos div.info-inputs div.buttons {
             width: 100%;
             display: flex;
             align-items: center;
             flex-direction: column; }
-          article.user-manage div.update div.user div.infos form div.inputs {
-            height: calc(100% - 235px); }
-          article.user-manage div.update div.user div.infos form input {
+          article.user-manage div.update div.user div.infos div.info-inputs iframe {
+            margin-top: 20px;
+            width: 75%;
+            height: 300px; }
+          article.user-manage div.update div.user div.infos div.info-inputs input {
             width: 75%;
             height: 50px;
             font-size: 75%;
             border: none;
             border-bottom: 1px solid #D8DEE2; }
-          article.user-manage div.update div.user div.infos form button {
+          article.user-manage div.update div.user div.infos div.info-inputs button {
             width: 75%;
             height: 40px;
             margin: 20px 0px 0px 0px;
@@ -365,13 +374,25 @@ article.user-manage {
             font-weight: bold;
             letter-spacing: 1px;
             font-size: 90%; }
-          article.user-manage div.update div.user div.infos form button.update {
+          article.user-manage div.update div.user div.infos div.info-inputs button.update {
             margin-top: 50px;
             background-color: #2CAF90; }
-          article.user-manage div.update div.user div.infos form button.delete {
+          article.user-manage div.update div.user div.infos div.info-inputs button.delete {
             background-color: #b92424; }
       article.user-manage div.update div.user div.roles {
-        width: 200px; }
+        width: auto;
+        min-width: 115px;
+        overflow-x: hidden;
+        overflow-y: auto; }
+        article.user-manage div.update div.user div.roles div {
+          display: flex;
+          margin-bottom: 15px; }
+          article.user-manage div.update div.user div.roles div input {
+            margin-right: 10px; }
       article.user-manage div.update div.user div.projects {
-        width: 200px; }
+        width: 50%; }
+      article.user-manage div.update div.user div.buttons {
+        position: absolute;
+        right: 20px;
+        bottom: 20px; }
 

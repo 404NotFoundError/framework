@@ -3,7 +3,7 @@
 let ScriptLoader = {
 
     // Permet d'avoir l'url courante
-    loaction: window.location.protocol+'//'+window.location.host,
+    location: window.location.protocol+'//'+window.location.host,
     // Le selecteur css du module 
     element: null,
     // La liste de tes variables

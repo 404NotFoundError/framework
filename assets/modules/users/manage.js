@@ -1,23 +1,53 @@
 import ScriptLoader from './../../helpers/ScriptLoader';
+import { log } from 'util';
 
 const manage = ScriptLoader;
+
+manage.element = ".backOffice .user-manage";
 
 // Barre de recherche
 const searchInput = document.forms['search-form']['search'];
 // Contenzur d'utilisateur 
 const list = document.querySelector('.users-list');
+// Liste des utilisateurs
 
-manage.element = ".backOffice .user-manage";
-
+// Script
 manage.script = () => {
 
-    // Lorque l'utilisateur est sur la basere de recher
+    search();
+    
+    new Vue({
+        el: manage.element,
+        delimiters: ['${', '}'],
+        data: {
+            test: null,
+            user: null
+        },
+
+        methods: {
+            // Récupération d'un utilisateur 
+            getUser: (userId) => {
+               const req = new XMLHttpRequest();
+               req.open('GET', manage.location+'/user/manage/'+userId, false); 
+               req.send(null);
+               console.log(req.responseText);
+            },
+           
+        }
+       
+
+    });
+
+}
+
+
+// Fais à l'arrache 
+const search = () => {
     searchInput.addEventListener('keyup', function () {
         let usersElement = document.querySelectorAll('.users-list > div');
         for (let i = 0; i < usersElement.length; i++) { list.removeChild(usersElement[i]);}
         searchUsers(searchInput.value);
     });
-    
 }
 
 // Réccupération de la liste des utilisateurs
@@ -61,4 +91,4 @@ const searchUsers = (username) => {
     });
 }
 
-export default manage;
+export default manage; 

@@ -44,6 +44,12 @@ $route->create(['GET', 'POST'], '/user/manage', 'User\UserController@manage')
       ->description('Gestion des utilisateurs')
       ->middleware([]);
 
+//
+$route->create(['GET'], '/user/manage/{id}', 'User\UserController@findUser')
+      ->name('login-page')
+      ->description('Gestion des utilisateurs')
+      ->middleware([]);
+
 // Search User
 $route->create(['GET'], '/user/search/{username}', 'User\UserController@searchUser')
       ->name('')

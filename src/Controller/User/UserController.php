@@ -8,14 +8,46 @@ use App\EntityManager\UserManager;
 
 class UserController extends Controller
 {
-    // Retourne l apage de gestionde sutilisateurs
+    // Retourne la page de gestionde sutilisateurs
     public function manage()
     {
-        $users = $this->getTable(User::class)->getAll();
+        $entityManager = new UserManager();
+        $users = $entityManager->getAllUsers();
+        // Rendu du template
         return $this->view('/users/manage.html.twig', [
             'users' => $users,
             'roles' => User::getRolesTypes()
         ]);
+    }
+
+    public function findUser()
+    {
+        $userList = [];
+
+        if (isset($this->params['id'])) {
+
+            $id = $this->params['id'];
+            
+            $user = $this->getTable(User::class)->search([
+                'id'  => ['=', $id]
+            ])->getOne();
+
+            $data['id'] = $user->getId();
+            $data['lastname'] = $user->getLastname();
+            $data['firstname'] = $user->getFirstname();
+            $data['phone'] = $user->getPhone();
+            $data['roles'] = $user->getRoles();
+            $data['address'] = $user->getAddress();
+            $data['cp'] = $user->getCodePostal();
+            $data['city'] = $user->getCity();
+            $data['country'] = $user->getCountry();
+
+            echo json_encode($data);
+
+        } else {
+            http_response_code(404);
+        }
+        
     }
 
     public function searchUser()
@@ -28,7 +60,8 @@ class UserController extends Controller
             
             $users = $this->getTable(User::class)->search([
                 'lastname'  => ['LIKE', $username, 'OR'],
-                'firstname' => ['LIKE', $username]
+                'firstname' => ['LIKE', $username, 'OR'],
+                'email'     => ['LIKE', $username]
             ])->get();
 
             foreach ($users as $key => $value) {
@@ -36,7 +69,12 @@ class UserController extends Controller
                 $user['lastname']  =  $value->getLastname();
                 $user['firstname'] =  $value->getFirstname();
                 $user['email']     =  $value->getEmail();
+                $user['phone']     =  $value->getPhone();
                 $user['roles']     =  $value->getRoles();
+                $user['cp']        =  $value->getCodePostal();
+                $user['address']   =  $value->getAddress();
+                $user['city']      =  $value->getCity();
+                $user['country']   =  $value->getCountry();
                 array_push($userList, $user);
             }
 
@@ -47,6 +85,8 @@ class UserController extends Controller
         }
         
     }
+
+    // <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCFQqb2QdPtzrId3scey9FVV9T0LY88wm8&q={{ user.address }},{{ user.city}} {{ user.country }}" allowfullscreen></iframe>
 
 
 
