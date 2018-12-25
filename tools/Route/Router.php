@@ -120,7 +120,7 @@ class Router
    * @param array, $middlewares
    * @return Router
    */
-  public function middleware(array $middlewares)
+  public function middlewares(array $middlewares)
   {
     $this->routes[$this->offset]['middlewares'] = $middlewares;
     return $this;

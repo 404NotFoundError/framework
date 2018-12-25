@@ -6,52 +6,52 @@
 $route->create(['GET'], '/', 'HomeController@index')
       ->name('home-page')
       ->description('Acceuil')
-      ->middleware([]);
+      ->middlewares([]);
 
 // Login
 $route->create(['GET', 'POST'], '/login', 'User\LoginController@login')
       ->name('login-page')
       ->description('Connexion')
-      ->middleware([]);
+      ->middlewares([]);
 
 // Password forgot 
 $route->create(['GET', 'POST'], '/user/password/forgot', 'User\PasswordResetController@forgotPassword')
-      ->name('')
+      ->name('password-token')
       ->description('Génération de token pour mot de passe oublier')
-      ->middleware([]);
+      ->middlewares([]);
 
 // Password Update with token
 $route->create(['GET', 'POST'], '/user/password/update/{email}/{token}', 'User\PasswordResetController@generatePassword')
-      ->name('')
+      ->name('update-password-token')
       ->description('Mise à jour mot de passe oublié')
-      ->middleware([]);
+      ->middlewares([]);
 
 // BackOffice Dashboard
 $route->create(['GET'], '/dash/backoffice', 'User\BackOfficeDashboard@dashboard')
-      ->name('')
+      ->name('home-backOffice')
       ->description(' Acceuil backoffice')
-      ->middleware([]);
+      ->middlewares(['auth']);
 
 // FrontOffice Dashboard
 $route->create(['GET'], '/dash/frontoffice', 'User\FrontOfficeDashBoard@dashboard')
-      ->name('')
+      ->name('home-frontOffice')
       ->description('acceuil frontoffice')
-      ->middleware([]);
+      ->middlewares([]);
 
 // Manage Users
 $route->create(['GET', 'POST'], '/user/manage', 'User\UserController@manage')
-      ->name('login-page')
+      ->name('user-mange-page')
       ->description('Gestion des utilisateurs')
-      ->middleware([]);
+      ->middlewares([]);
 
-// Update User
-$route->create(['GET'], '/user/manage/{id}', 'User\UserController@findUser')
-      ->name('login-page')
-      ->description('Gestion des utilisateurs')
-      ->middleware([]);
+// Api User
+$route->create(['POST'], '/user/manage/{id}', 'User\UserController@findUser')
+      ->name('api-get-user')
+      ->description('Réccupération d\'un utilisateur à l\'aide d\'une api')
+      ->middlewares([]);
 
-// Search User
+// Api Search User
 $route->create(['GET'], '/user/search/{username}', 'User\UserController@searchUser')
       ->name('')
       ->description('Gestion des utilisateurs')
-      ->middleware([]);
+      ->middlewares([]);

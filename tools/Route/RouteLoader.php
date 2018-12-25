@@ -26,7 +26,10 @@ class RouteLoader
          /* On vérifie si le client est connecter à la bonne méthode */
          define('APP_ROUTE', $route);
          /* On regarde si la route à de smiddlewares, si oui on les gère */
-         if (isset($route['middlewares'])) $this->loadMiddlewares($route['middlewares']);
+         if (isset($route['middlewares'])) {
+           $this->loadMiddlewares($route['middlewares']);
+         } 
+
          /* On charge le controller et l'action et les paramètres */
          $controller = 'App\Controller\\' .  $route['controller'];
          $action = $route['action'];
@@ -65,14 +68,14 @@ class RouteLoader
 
   // TODO:
   // Vérifie si un controller existe
-  private function verifyIfControllerExist()
+  private function controllerExist()
   {
 
   }
 
   // TODO:
   // Vérifie si une route existe
-  private function verifyIfMethodExist()
+  private function methodExist()
   {
 
   }
@@ -92,7 +95,8 @@ class RouteLoader
        // TODO: Charger les middleware
        $middleware = 'App\Middleware\\' .  APP_MIDDLEWARES[$middleware];
        $middleware = explode('@', $middleware);
-       /* On istencie la classe */
+
+       /* On instencie la classe */
        $class = new $middleware[0];
        /* On charge une action qi elle ecxiste */
        if (isset($middleware[1])) {
@@ -104,10 +108,9 @@ class RouteLoader
   }
 
   /**
-   *
    * @return array, $data
    */
-  public function formatRequestIfParamsExist(string $path)
+  public function formatRequestIfParamsExist(string $path) : array
   {
       $url   = explode('/', $_SERVER['REQUEST_URI']);
       $route = explode('/', $path);

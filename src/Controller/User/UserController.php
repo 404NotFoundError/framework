@@ -5,19 +5,20 @@ namespace App\Controller\User;
 use Tool\Controller;
 use App\Entity\User;
 use App\EntityManager\UserManager;
+use App\Middleware\SecurityMiddleware;
 
 class UserController extends Controller
 {
     // Retourne la page de gestionde sutilisateurs
     public function manage()
     {
-        $entityManager = new UserManager();
-        $users = $entityManager->getAllUsers();
+        $users = UserManager::getAllUsers();
         // Rendu du template
         return $this->view('/users/manage.html.twig', [
             'users' => $users,
             'roles' => User::getRolesTypes()
         ]);
+
     }
 
     public function findUser()
@@ -86,7 +87,6 @@ class UserController extends Controller
         
     }
 
-    // <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCFQqb2QdPtzrId3scey9FVV9T0LY88wm8&q={{ user.address }},{{ user.city}} {{ user.country }}" allowfullscreen></iframe>
 
 
 

@@ -7,8 +7,11 @@ manage.element = ".backOffice .user-manage";
 manage.script = () => {
 
     let v = new Vue({
+
         el: manage.element,
+
         delimiters: ['${', '}'],
+        
         data: {
             id: null,
             user: null,
@@ -37,7 +40,6 @@ manage.script = () => {
              } 
            
         }
-        
 
     });
 
