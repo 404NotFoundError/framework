@@ -16,9 +16,14 @@ class LoginController extends Controller
   // Log a user 
   public function login()
   {
+    // On récuèpre la dernière adresse email qui c'est connecter sur la navigateur
+    isset($_COOKIE['user']) ? $email = $_COOKIE['user'] : $email = null;
     $this->postLogin();
     // Rendue de la vue
-    return $this->view('/users/login.html.twig', []);
+    return $this->view('/users/login.html.twig', [
+      'lastemail' => $email
+    ]);
+
   }
 
   // Traitement du formuliare de connectetion
@@ -30,8 +35,9 @@ class LoginController extends Controller
       if (empty($this->controlPostData())){
          // On vérifie si l'addresse email est valide et que cette dernière correspond à l'email 
          $user = $this->getTable(User::class)->search(['email' => ['=', $_POST['email']]])->getOne();
-
          if ($user && $user->isEqualPassword($_POST['password'])) {
+           $_SESSION['user'] = $user->getId();
+           setcookie("user", $user->getEmail(), time()+3600 * 24 * 7 *4);
            // Redirection de l'utilisateur
            if (in_array('admin', $user->getRoles())) {
             header('Location: /dash/backoffice');

@@ -18,6 +18,11 @@ if(APP_MODE === 'dev') {
     foreach ($functions as $key => $function) { require_once $function; }
 }
 
+// Gestion de la langue par défaut de l'application
+if (!isset($_COOKIE['lang'])) {
+    setcookie("lang", APP_LANG , time()+3600 * 24 * 7 * 4 * 50000);
+}
+
 // Securitu Faillure Manage
 Tool\Security\FailureSecurityBundle::generateToken();
 Tool\Security\FailureSecurityBundle::filterEntry();

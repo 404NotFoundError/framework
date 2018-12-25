@@ -1,21 +1,19 @@
 <?php
 
-/** YOUR APP CONFIGURATION HERE **/
-
 // APPLICATION CONFIG
 define('APP_MODE', 'dev');
 define('APP_NAME', 'ADIDA');
-define('APP_FOLDER_NAME', 'portfolio');
 define('APP_KEY', '');
 define('APP_HOST', 'http://www.local.adebayo.me:8888');
+define('APP_LANG', 'fr');
 
 // MAIL CONFIG
 define('APP_MAIL', 'hbb.develop@gmail.com');
 define('APP_SMTP', 'smtp.gmail.com');
+define('APP_SMTP_PORT', 587);
 define('APP_SMTP_AUTH', true);
 define('APP_SMTP_USERNAME', 'hbb.develop@gmail.com');
 define('APP_SMTP_PASSWORD', 'N2cobusy');
-define('APP_SMTP_PORT', 587);
 define('APP_SMTP_PASS', 'N2cobusy');
 
 // DATABASE CONFIG
@@ -33,7 +31,7 @@ define('ROLES', [
    'admin'       => ['dev'],
    'manager', 
    'dev'         => ['vip', 'firm', 'particular', 'user', 'visitor'],
-   'vip'        =>  ['firm'],
+   'vip'         => ['firm'],
    'firm',        
    'particular',
    'user',

@@ -23,13 +23,18 @@
         <!-- email -->
         <div class="email">
             <span class="error"> {{ error.input.email }} </span>
-            <input type="text" name="email" placeholder="Email"/ value="{{ post.email }}">
+        {% if post.email %}
+             <input type="text" name="email" placeholder="  Email" value="{{ post.email }}">
+        {% else %}
+             <input type="text" name="email" placeholder="  Email" value="{{ lastemail }}">
+        {% endif %}
         </div>
+
 
         <!-- password -->
         <div class="password">
             <span class="error"> {{ error.input.password }} </span>
-            <input type="password" name="password" placeholder="Mot de passe"/>
+            <input type="password" name="password" placeholder="  Mot de passe"/>
             <a href="/user/password/forgot?email={{ post.email }}" class="password-forgot"> Mot de passe oublié ? </a>
         </div>
 

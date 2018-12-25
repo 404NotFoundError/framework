@@ -38,13 +38,13 @@ $route->create(['GET'], '/dash/frontoffice', 'User\FrontOfficeDashBoard@dashboar
       ->description('acceuil frontoffice')
       ->middleware([]);
 
-// User Manage
+// Manage Users
 $route->create(['GET', 'POST'], '/user/manage', 'User\UserController@manage')
       ->name('login-page')
       ->description('Gestion des utilisateurs')
       ->middleware([]);
 
-//
+// Update User
 $route->create(['GET'], '/user/manage/{id}', 'User\UserController@findUser')
       ->name('login-page')
       ->description('Gestion des utilisateurs')

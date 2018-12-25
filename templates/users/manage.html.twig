@@ -14,10 +14,10 @@
         </form>
         <!-- user list -->
         <div class="users-list">
-             
+           
             {% for user in users %}
                 <!-- user -->
-                <div class="user" id="user-{{ user.id }}" v-on:click="getUser( {{ user.id }} )">
+                <div class="user" id="user-{{ user.id }}"  v-on:click="getUser( {{ user.id }} ), id = {{ user.id }}">
                     <!-- picture -->
                     <div class="pic"> <img src="" /> </div>
                     <!-- data -->
@@ -28,12 +28,13 @@
                     </div>
                 </div>
             {% endfor %}
+            
         </div>
     </div>
 
     <!-- Update -->
     <div class="update">
-
+    <h1> ${id} </h1>
     </div>
 
 {% endblock %}
