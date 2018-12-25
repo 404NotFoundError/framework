@@ -152,14 +152,19 @@ body.login section form {
     letter-spacing: 1px;
     border: none;
     border-radius: 10px;
-    box-shadow: 0px 0px 4px #D8DEE2; }
+    box-shadow: 0px 0px 4px #D8DEE2;
+    padding: 0 13px; }
+    body.login section form input:focus {
+      box-shadow: 0px 0px 4px #2CAF90; }
   body.login section form input[type=submit] {
     background-color: #2CAF90;
     color: white;
     font-size: 115%;
     font-weight: bold;
     letter-spacing: 1.2px;
-    box-shadow: none; }
+    box-shadow: none;
+    width: 80%;
+    cursor: pointer; }
   body.login section form .password-forgot {
     width: 75%;
     margin-top: 12px;
@@ -176,6 +181,219 @@ body.login {
     display: flex;
     align-items: center;
     justify-content: center; }
+
+/**** THEME - COLORS ****/
+/**** BUTTONS COLORS *****/
+/**** BACKGROUND COLORS ****/
+/**** FONT ****/
+body.error-401 #notfound {
+  position: relative;
+  height: 100vh; }
+  body.error-401 #notfound .notfound {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 920px;
+    width: 100%;
+    line-height: 1.4;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px; }
+    body.error-401 #notfound .notfound .notfound-401 {
+      position: absolute;
+      height: 100px;
+      top: 0;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      z-index: -1; }
+      body.error-401 #notfound .notfound .notfound-401 h1 {
+        color: #ececec;
+        font-weight: 900;
+        font-size: 276px;
+        margin: 0px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); }
+    body.error-401 #notfound .notfound h2 {
+      font-size: 34px;
+      color: #000;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin: 0px; }
+    body.error-401 #notfound .notfound p {
+      font-size: 14px;
+      color: #000;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin-top: 15px; }
+    body.error-401 #notfound .notfound a {
+      font-size: 14px;
+      text-decoration: none;
+      text-transform: uppercase;
+      background: #2CAF90;
+      display: inline-block;
+      padding: 16px 38px;
+      border: 2px solid transparent;
+      border-radius: 40px;
+      color: #fff;
+      margin: 50px auto 0;
+      font-weight: 400;
+      -webkit-transition: 0.2s all;
+      transition: 0.2s all; }
+      body.error-401 #notfound .notfound a:hover {
+        background-color: #fff;
+        border-color: #2CAF90;
+        color: #2CAF90; }
+
+/**** THEME - COLORS ****/
+/**** BUTTONS COLORS *****/
+/**** BACKGROUND COLORS ****/
+/**** FONT ****/
+body.error-404 #notfound {
+  position: relative;
+  height: 100vh; }
+  body.error-404 #notfound .notfound {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 920px;
+    width: 100%;
+    line-height: 1.4;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px; }
+    body.error-404 #notfound .notfound .notfound-404 {
+      position: absolute;
+      height: 100px;
+      top: 0;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      z-index: -1; }
+      body.error-404 #notfound .notfound .notfound-404 h1 {
+        color: #ececec;
+        font-weight: 900;
+        font-size: 276px;
+        margin: 0px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); }
+    body.error-404 #notfound .notfound h2 {
+      font-size: 34px;
+      color: #000;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin: 0px; }
+    body.error-404 #notfound .notfound p {
+      font-size: 14px;
+      color: #000;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin-top: 15px; }
+    body.error-404 #notfound .notfound a {
+      font-size: 14px;
+      text-decoration: none;
+      text-transform: uppercase;
+      background: #2CAF90;
+      display: inline-block;
+      padding: 16px 38px;
+      border: 2px solid transparent;
+      border-radius: 40px;
+      color: #fff;
+      margin: 50px auto 0;
+      font-weight: 400;
+      -webkit-transition: 0.2s all;
+      transition: 0.2s all; }
+      body.error-404 #notfound .notfound a:hover {
+        background-color: #fff;
+        border-color: #2CAF90;
+        color: #2CAF90; }
+
+/**** THEME - COLORS ****/
+/**** BUTTONS COLORS *****/
+/**** BACKGROUND COLORS ****/
+/**** FONT ****/
+body.error-500 #notfound {
+  position: relative;
+  height: 100vh; }
+  body.error-500 #notfound .notfound {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 920px;
+    width: 100%;
+    line-height: 1.4;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px; }
+    body.error-500 #notfound .notfound .notfound-500 {
+      position: absolute;
+      height: 100px;
+      top: 0;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      z-index: -1; }
+      body.error-500 #notfound .notfound .notfound-500 h1 {
+        color: #ececec;
+        font-weight: 900;
+        font-size: 276px;
+        margin: 0px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); }
+    body.error-500 #notfound .notfound h2 {
+      font-size: 34px;
+      color: #000;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin: 0px; }
+    body.error-500 #notfound .notfound p {
+      font-size: 14px;
+      color: #000;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin-top: 15px; }
+    body.error-500 #notfound .notfound a {
+      font-size: 14px;
+      text-decoration: none;
+      text-transform: uppercase;
+      background: #2CAF90;
+      display: inline-block;
+      padding: 16px 38px;
+      border: 2px solid transparent;
+      border-radius: 40px;
+      color: #fff;
+      margin: 50px auto 0;
+      font-weight: 400;
+      -webkit-transition: 0.2s all;
+      transition: 0.2s all; }
+      body.error-500 #notfound .notfound a:hover {
+        background-color: #fff;
+        border-color: #2CAF90;
+        color: #2CAF90; }
 
 /**** THEME - COLORS ****/
 /**** BUTTONS COLORS *****/
@@ -235,14 +453,19 @@ body.paswwordForgot section form {
     letter-spacing: 1px;
     border: none;
     border-radius: 10px;
-    box-shadow: 0px 0px 4px #D8DEE2; }
+    box-shadow: 0px 0px 4px #D8DEE2;
+    padding: 0 13px; }
+    body.paswwordForgot section form input:focus {
+      box-shadow: 0px 0px 4px #2CAF90; }
   body.paswwordForgot section form input[type=submit] {
     background-color: #2CAF90;
     color: white;
     font-size: 115%;
     font-weight: bold;
     letter-spacing: 1.2px;
-    box-shadow: none; }
+    box-shadow: none;
+    width: 80%;
+    cursor: pointer; }
   body.paswwordForgot section form .password-forgot {
     width: 75%;
     margin-top: 12px;

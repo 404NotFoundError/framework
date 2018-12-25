@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} 500 {% endblock %}
+
+{% block template %}error-500{% endblock %}
+
+{% block body %} 
+
+    <div id="notfound">
+		<div class="notfound">
+			<div class="notfound-500">
+				<h1>500</h1>
+			</div>
+			<h2>Erreur Interne du Serveur</h2>
+			<a href="/">Retour à la page d'accueil</a>
+		</div>
+	</div>
+
+{% endblock %}
