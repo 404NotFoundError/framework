@@ -12,7 +12,8 @@ class UserController extends Controller
     // Retourne la page de gestionde sutilisateurs
     public function manage()
     {
-        $users = UserManager::getAllUsers();
+        $entityManager = new UserManager();
+        $users =  $entityManager->getAllUsers();
         // Rendu du template
         return $this->view('/users/manage.html.twig', [
             'users' => $users,

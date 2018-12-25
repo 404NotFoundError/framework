@@ -13,7 +13,7 @@ class UserManager
     use \Tool\Mysql\MysqlEntityManager;
 
     // Renvoie la liste de tous les utilisateurs
-    public static function getAllUsers() : array
+    public function getAllUsers() : array
     {
         $userList = [];
         $users = $this->getTable(User::class)->getAll();
