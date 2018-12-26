@@ -14,7 +14,7 @@ if(APP_MODE === 'dev') {
     ini_set('display_errors', 'on');
     // On reccupère tout les outils de dev du framework
     $functions = glob(__dir__ . '/../tools/Functions/*php');
-    // On inclus tous les outils de dev du framework
+    // On inclus tous les outils de dev du framewwork
     foreach ($functions as $key => $function) { require_once $function; }
 }
 

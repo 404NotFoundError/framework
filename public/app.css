@@ -98,94 +98,6 @@ body.backOffice {
 /**** BUTTONS COLORS *****/
 /**** BACKGROUND COLORS ****/
 /**** FONT ****/
-body.login section form {
-  width: 100%;
-  max-width: 500px;
-  height: 100%;
-  max-height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  box-shadow: 0px 0px 4px #D8DEE2;
-  background-color: #FFFFFF;
-  border-radius: 10px; }
-  body.login section form div {
-    width: 100%;
-    height: auto;
-    margin: 20px 0px 20px 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; }
-  body.login section form div.title {
-    color: #788089;
-    font-size: 220%;
-    letter-spacing: 3px;
-    text-align: center;
-    margin: 0px 0px 20px 0px; }
-  body.login section form div.global {
-    display: block;
-    margin: 2px 0px 2px 0px;
-    text-align: center; }
-  body.login section form div.global-2 {
-    margin: 20px 0px 0px 0px; }
-  body.login section form span.error {
-    width: 75%;
-    height: auto;
-    color: #852727;
-    text-align: left;
-    margin-bottom: 10px;
-    letter-spacing: 0.5px; }
-  body.login section form span.success {
-    width: 75%;
-    height: auto;
-    color: #27853f;
-    text-align: left;
-    line-height: 20px;
-    margin-bottom: 10px;
-    letter-spacing: 0.5px; }
-  body.login section form input {
-    width: 75%;
-    height: 40px;
-    font-size: 100%;
-    letter-spacing: 1px;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0px 0px 4px #D8DEE2;
-    padding: 0 13px; }
-    body.login section form input:focus {
-      box-shadow: 0px 0px 4px #2CAF90; }
-  body.login section form input[type=submit] {
-    background-color: #2CAF90;
-    color: white;
-    font-size: 115%;
-    font-weight: bold;
-    letter-spacing: 1.2px;
-    box-shadow: none;
-    width: 80%;
-    cursor: pointer; }
-  body.login section form .password-forgot {
-    width: 75%;
-    margin-top: 12px;
-    text-align: right;
-    color: #788089; }
-
-body.login {
-  width: 100%;
-  height: 100%;
-  background-color: #F6F7F8; }
-  body.login section {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-
-/**** THEME - COLORS ****/
-/**** BUTTONS COLORS *****/
-/**** BACKGROUND COLORS ****/
-/**** FONT ****/
 body.error-401 #notfound {
   position: relative;
   height: 100vh; }
@@ -394,6 +306,94 @@ body.error-500 #notfound {
         background-color: #fff;
         border-color: #2CAF90;
         color: #2CAF90; }
+
+/**** THEME - COLORS ****/
+/**** BUTTONS COLORS *****/
+/**** BACKGROUND COLORS ****/
+/**** FONT ****/
+body.login section form {
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  max-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0px 0px 4px #D8DEE2;
+  background-color: #FFFFFF;
+  border-radius: 10px; }
+  body.login section form div {
+    width: 100%;
+    height: auto;
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+  body.login section form div.title {
+    color: #788089;
+    font-size: 220%;
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 0px 0px 20px 0px; }
+  body.login section form div.global {
+    display: block;
+    margin: 2px 0px 2px 0px;
+    text-align: center; }
+  body.login section form div.global-2 {
+    margin: 20px 0px 0px 0px; }
+  body.login section form span.error {
+    width: 75%;
+    height: auto;
+    color: #852727;
+    text-align: left;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px; }
+  body.login section form span.success {
+    width: 75%;
+    height: auto;
+    color: #27853f;
+    text-align: left;
+    line-height: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px; }
+  body.login section form input {
+    width: 75%;
+    height: 40px;
+    font-size: 100%;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px #D8DEE2;
+    padding: 0 13px; }
+    body.login section form input:focus {
+      box-shadow: 0px 0px 4px #2CAF90; }
+  body.login section form input[type=submit] {
+    background-color: #2CAF90;
+    color: white;
+    font-size: 115%;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    box-shadow: none;
+    width: 80%;
+    cursor: pointer; }
+  body.login section form .password-forgot {
+    width: 75%;
+    margin-top: 12px;
+    text-align: right;
+    color: #788089; }
+
+body.login {
+  width: 100%;
+  height: 100%;
+  background-color: #F6F7F8; }
+  body.login section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
 
 /**** THEME - COLORS ****/
 /**** BUTTONS COLORS *****/
@@ -618,4 +618,30 @@ article.user-manage {
         position: absolute;
         right: 20px;
         bottom: 20px; }
+
+/**** THEME - COLORS ****/
+/**** BUTTONS COLORS *****/
+/**** BACKGROUND COLORS ****/
+/**** FONT ****/
+body.backOffice article.projet-manage {
+  border-radius: 10px;
+  box-shadow: 0px 0px 2px #D8DEE2;
+  background-color: #FFFFFF;
+  display: flex; }
+  body.backOffice article.projet-manage > div {
+    height: 100%; }
+  body.backOffice article.projet-manage div.aside {
+    width: 350px;
+    height: 100%;
+    border-right: 1px solid #D8DEE2;
+    overflow-x: hidden;
+    overflow: hidden; }
+    body.backOffice article.projet-manage div.aside form {
+      width: 100%;
+      height: 50px;
+      border-bottom: 1px solid #D8DEE2; }
+      body.backOffice article.projet-manage div.aside form input {
+        width: 100%;
+        height: 95%;
+        border: none; }
 

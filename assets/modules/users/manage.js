@@ -1,49 +1,15 @@
 import ScriptLoader from './../../helpers/ScriptLoader';
 
-const manage = ScriptLoader;
+const manage = new ScriptLoader(
+    "body.backOffice article.user-manage"
+);
 
-manage.element = ".backOffice .user-manage";
-
-manage.script = () => {
-
-    let v = new Vue({
-
-        el: manage.element,
-
-        delimiters: ['${', '}'],
-        
-        data: {
-            id: null,
-            user: null,
-            users: null,
-        },
-
-        methods: {
-            
-            // Récuperation de tous les utilisateurs
-            getUsers: () => {
-
-            },
-
-            // Rechercher d'une liste d'utilisateur
-            searhUser: () => {
-                
-            },
-
-            // Récupération d'un utilisateur 
-            getUser: (userId) => {
-                const req = new XMLHttpRequest();
-                req.open('GET', manage.location+'/user/manage/'+userId, false); 
-                req.send(null);
-                v.user = req.responseText;
-                console.log(v.user);
-             } 
-           
-        }
-
-    });
-
+const script = () => {
+    console.log( 'HOST: ' + manage.host);
+    console.log( 'LOCATION: ' + manage.location);
+    console.log("USER MANAGE HERE");
 }
 
+manage.load(script)
 
-export default manage; 
+export default manage;

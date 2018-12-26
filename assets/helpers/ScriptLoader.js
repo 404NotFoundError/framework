@@ -1,28 +1,25 @@
 
-// Chaque page sera représenter par un objet
-let ScriptLoader = {
+class ScriptLoader 
+{
 
-    // Permet d'avoir l'url courante
-    location: window.location.protocol+'//'+window.location.host,
-    // Le selecteur css du module 
-    element: null,
-    // La liste de tes variables
-    var: {},
+    constructor(element) {
 
-    // A ne jamais utiliser, c'est une fonction autonome du framework
-    loader: () => {
+        this.host     = window.location.protocol+'//'+window.location.host;
+        this.location = window.location.href;
+        this.element  = element;
 
-        const element = document.querySelector(ScriptLoader.element);
-        // On va réccuperer l'élément 
-        if (element !== null) {
-            ScriptLoader.script();
-        }
+    }
+    
+    load(script) {
         
-    },
-
-    // Cette fonction doit être redéfinir dans l'objet pour définit le code à excuter pour la page
-    script: () => {},
-
-}   
+        let element = document.querySelector(this.element);
+        
+        if (element !== null) {
+            script()
+        }
+       
+    }
+    
+}
 
 export default ScriptLoader;

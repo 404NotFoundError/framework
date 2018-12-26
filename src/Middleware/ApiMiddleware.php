@@ -32,7 +32,12 @@ class ApiMiddleware
     //
     public function postMethod()
     {
-
+        if (isset($_POST['token']) && isset($_SESSION['token']) && $_POST['token'] === $_SESSION['token']) {
+            
+        } else {
+           
+        }
+        
     }
 
     
