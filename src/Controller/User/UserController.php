@@ -13,7 +13,7 @@ class UserController extends Controller
     public function manage()
     {
         $entityManager = new UserManager();
-        $users =  $entityManager->getAllUsers();
+        $users = $entityManager->getAllUsers();
         // Rendu du template
         return $this->view('/users/manage.html.twig', [
             'users' => $users,
@@ -22,6 +22,15 @@ class UserController extends Controller
 
     }
 
+    // Renvoie la liste des utilisateurs
+    public function findUsers()
+    {
+        $entityManager = new UserManager();
+        $users = $entityManager->getAllUsers();
+        echo json_encode($users);
+    }
+
+    // Retourne un utilisateur
     public function findUser()
     {
         $userList = [];
@@ -87,8 +96,6 @@ class UserController extends Controller
         }
         
     }
-
-
 
 
 }
