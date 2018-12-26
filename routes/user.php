@@ -47,13 +47,13 @@ $route->create(['GET', 'POST'], '/user/manage', 'User\UserController@manage')
 // Api Users list
 $route->create(['GET'], '/api/users', 'User\UserController@findUsers')
       ->name('api-get-users')
-      ->description('Liste des tous les utilisateurs')
+      ->description('Liste de tous les utilisateurs')
       ->middlewares([]);
 
 // Api User
 $route->create(['GET'], '/api/user/{id}', 'User\UserController@findUser')
       ->name('api-get-user')
-      ->description('Réccupération d\'un utilisateur via son id')
+      ->description('Récupération d\'un utilisateur via son id')
       ->middlewares([]);
 
 // Api Search User

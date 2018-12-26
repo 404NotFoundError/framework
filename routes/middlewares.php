@@ -6,6 +6,8 @@
 define('APP_MIDDLEWARES',[
 
    // Vérifie si un utilisateur est authentifier
-  'auth' => 'SecurityMiddleware@isAuth'
+  'auth'   => 'SecurityMiddleware@isAuth',
+   //
+  'apiget' => 'ApiMiddleware@getMethod'
 
 ]);

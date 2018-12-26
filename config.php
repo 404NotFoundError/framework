@@ -4,7 +4,7 @@
 define('APP_MODE', 'dev');
 define('APP_NAME', 'ADIDA');
 define('APP_KEY', '');
-define('APP_HOST', 'http://www.local.adebayo.me:8888');
+define('APP_SERVER', 'http://www.local.room.ovh');
 define('APP_LANG', 'fr');
 
 // MAIL CONFIG

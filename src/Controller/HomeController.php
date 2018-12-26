@@ -13,6 +13,8 @@ class HomeController extends Controller
     public function index()
     {
         app_debug('This home page go to /login for log');
+
+        return $this->view('home.html.twig', []);
     }
 
 

@@ -14,17 +14,18 @@ class UserController extends Controller
     {
         $entityManager = new UserManager();
         $users = $entityManager->getAllUsers();
+
         // Rendu du template
         return $this->view('/users/manage.html.twig', [
             'users' => $users,
             'roles' => User::getRolesTypes()
         ]);
-
     }
 
     // Renvoie la liste des utilisateurs
     public function findUsers()
     {
+        // SecurityMiddleware::allowedAccess(['admin']);
         $entityManager = new UserManager();
         $users = $entityManager->getAllUsers();
         echo json_encode($users);

@@ -1,0 +1,10 @@
+
+<script>
+
+    const req = new XMLHttpRequest();
+    req.open('GET','http://www.local.room.ovh:8888/api/users', false); 
+    req.send(null);
+    const users = req.responseText;
+    console.log(users);
+
+</script>
